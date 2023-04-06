@@ -1,0 +1,49 @@
+theme = "my-gruvbox"
+# "my-noctis"
+# "onedark" 
+# "onelight"
+
+[editor]
+line-number = "relative"
+idle-timeout = 30
+completion-trigger-len = 1
+scrolloff = 5  # default 5
+color-modes = true
+cursorline = true
+cursorcolumn = true
+bufferline = "always"
+
+[editor.statusline]
+left = ["mode", "diagnostics", "spinner"]
+center = ["file-name"]
+right = ["selections", "position", "file-encoding", "file-type"]
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+# select = "underline"
+
+[editor.file-picker]
+hidden = false      # enables ignoring hidden files
+git-ignore = true   # don't show up in file picker when hidden=true 
+ignore = true       # don't show up in file picker when hidden=true
+max-depth = 4
+#  in order to ignore specific files/directories in a proyect,
+#  create a .ignore files with paths
+
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true
+# character = "┆"
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+";" = "remove_primary_selection"
+
