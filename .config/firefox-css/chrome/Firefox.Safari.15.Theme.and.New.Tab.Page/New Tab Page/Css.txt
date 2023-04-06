@@ -1,0 +1,19 @@
+body
+{
+   background-color: #363636;
+   background-image: url('https://i.ibb.co/DDS0GR1/wallhaven-5gwvz5.png');
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+   color: #ffffff;
+   font-family: Helvetica;
+   font-weight: normal;
+   font-size: 13px;
+}
+
+
+h1#title{display: none;}
+h2#title span {display: none;}
+div.header{display: none;}
+li.nav_element{list-style-type: none;}
+li.nav_element{display: none;}

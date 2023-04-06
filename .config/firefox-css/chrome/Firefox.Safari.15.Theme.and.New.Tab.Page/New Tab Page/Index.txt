@@ -1,0 +1,131 @@
+<div class="Section0" style="layout-grid: 18,0000pt;">
+<div align="center">
+<table class="MsoTableGrid" style="border-collapse: collapse; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-left: currentcolor; height: 642px;" cellspacing="0" border="0">
+<tbody>
+<tr style="height: 31px;">
+<td colspan="9" data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 31px; width: 817.5px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="height: 53px;">
+<td colspan="9" data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 53px; width: 817.5px;" valign="center">
+<p class="MsoNormal" style="text-align: left;"><span style="font-family: SF Pro Display, Segoe UI Semibold, sans-serif; font-size: 30px;"><strong>&nbsp;&nbsp;Favoriler</strong></span></p>
+</td>
+</tr>
+<tr style="height: 121px;">
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://www.youtube.com/"><img src="https://img.webme.com/vorschau/d/denizpl76/Newtab59.png" class="fr-fic fr-dii" style="width: 90px; height: 90px;" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Youtube</span></strong></span></p>
+</td>
+<td style="width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://music.youtube.com/"><img src="https://img.webme.com/vorschau/d/denizpl76/Newtab112.png" class="fr-fic fr-dii" style="width: 90px; height: 90px;" /><br /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">YT Music</span></strong></span></p>
+</td>
+<td style="width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://web.whatsapp.com/"><img src="https://img.webme.com/vorschau/d/denizpl76/Newtab170.png" class="fr-fic fr-dii" style="width: 90px; height: 90px;" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">WhatsApp</span></strong></span></p>
+</td>
+<td style="height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://www.instagram.com/"><img src="https://img.webme.com/vorschau/d/denizpl76/Newtab224.png" class="fr-fic fr-dii" style="width: 90px; height: 90px;" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Instagram</span></strong></span></p>
+</td>
+<td style="height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://www.reddit.com/"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab276.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Reddit</span></strong></span></p>
+</td>
+<td style="height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://tr.pinterest.com/"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab327.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Pinterest</span></strong></span></p>
+</td>
+<td style="height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://twitter.com/"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab376.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Twitter</span></strong></span></p>
+</td>
+<td style="width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://translate.google.com/?sl=en&amp;tl=tr&amp;op=translate"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab457.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Translate</span></strong></span></p>
+</td>
+<td style="width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://mail.google.com/mail/u/0/"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab519.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Gmail</span></strong></span></p>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 20px;"></td>
+<td style="width: 90.8333px; height: 20px;"></td>
+<td style="width: 90.8333px; height: 20px;"></td>
+<td style="height: 20px; width: 90.8333px;"></td>
+<td style="height: 20px; width: 90.8333px;"></td>
+<td style="height: 20px; width: 90.8333px;"></td>
+<td style="height: 20px; width: 90.8333px;"></td>
+<td style="width: 90.8333px; height: 20px;"></td>
+<td style="width: 90.8333px; height: 20px;"></td>
+</tr>
+<tr style="height: 121px;">
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://www.virustotal.com/gui/home/upload"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab587.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">VirusTotal</span></strong></span></p>
+</td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://wallhaven.cc/"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab639.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Wallpapers</span></strong></span></p>
+</td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://weather.com/tr-TR/weather/today/l/22232fa33505d0c2331ba3d43e9b961bfbf818d9c9f30fea9ffb2cb1f8878622"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab775.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Weather</span></strong></span></p>
+</td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td></td>
+</tr>
+<tr style="height: 30px;">
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 30px;"></td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 30px;"></td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 30px;"></td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 30px; width: 90.8333px;"></td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 30px; width: 90.8333px;"></td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 30px; width: 90.8333px;"></td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 30px; width: 90.8333px;"></td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 30px;"></td>
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 30px;"></td>
+</tr>
+<tr style="height: 53px;">
+<td colspan="9" data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; height: 53px; width: 817.5px;" valign="center">
+<p class="MsoNormal" style="text-align: left;"><span style="font-family: SF Pro Display, Segoe UI Semibold, sans-serif; font-size: 30px;"><strong>&nbsp;&nbsp;Sık Ziyaret Edilenler</strong></span></p>
+</td>
+</tr>
+<tr style="height: 121px;">
+<td data-darkreader-inline-border-top="" style="border-top: medium none; --darkreader-inline-border-top: currentcolor; width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://www.youtube.com/"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab909.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Youtube</span></strong></span></p>
+</td>
+<td style="width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://translate.google.com/?sl=en&amp;tl=tr&amp;op=translate"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab990.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">Translate</span></strong></span></p>
+</td>
+<td style="width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';"><a href="https://www.virustotal.com/gui/home/upload"><img style="width: 90px; height: 90px;" src="https://img.webme.com/vorschau/d/denizpl76/Newtab587.png" class="fr-fic fr-dii" /></a></span><span style="font-family: Segoe UI Semibold, Segoe UI Semibold, sans-serif;"><strong><span style="font-size: 12px;">VirusTotal</span></strong></span></p>
+</td>
+<td style="height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td style="height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td style="height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td style="height: 121px; width: 90.8333px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td style="width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+<td style="width: 90.8333px; height: 121px;" valign="center">
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="MsoNormal"><span style="mso-spacerun: 'yes'; font-family: Calibri; mso-fareast-font-family: SimSun; mso-bidi-font-family: 'Times New Roman';">&nbsp;</span></p>
+</div>

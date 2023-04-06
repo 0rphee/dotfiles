@@ -1,0 +1,60 @@
+/*======================================================== 
+
+SET THE CURRENT 'userChrome.css' THEME
+
+========================================================*/
+
+
+
+/*========================================================
+Cascade theme: https://github.com/andreasgrafen/cascade
+
+======================================================== */
+
+@import "cascade/userChrome.css";
+
+
+
+/*========================================================
+Minimalist setup (reddit): https://www.reddit.com/r/FirefoxCSS/comments/1264mqu/links_minimalist_setup/ 
+
+@import 'reddit-minimalist-setup/userChrome.css';
+======================================================== */
+
+
+/*========================================================
+minimalFOX theme: https://github.com/marmmaz/FirefoxCSS 
+
+@import 'minimalFOX/userChrome.css';
+======================================================== */
+
+/*========================================================
+AestheticFox theme: https://github.com/AidanMercer/AestheticFox 
+
+@import 'AestheticFox/userChrome.css';
+======================================================== */
+
+
+/*========================================================
+Firefox Safari 15 theme: https://github.com/denizjcan/Firefox-Safari-15-Theme
+
+Theme that changes color automatically according to your WALLPAPER and system light/dark mode.
+@import 'Firefox.Safari.15.Theme.and.New.Tab.Page/Firefox Safari 15 Wallpaper Adaptive Colors/UserChrome.css';
+
+Window color according to the currently open web page
+@import 'Firefox.Safari.15.Theme.and.New.Tab.Page/Firefox Safari 15 Original Theme/UserChrome.css';
+======================================================== */
+
+
+/*========================================================
+GruvFox theme: https://github.com/FirefoxCSSThemers/GruvFox/tree/main
+
+@import 'GruvFox/chrome/userChrome.css';
+======================================================== */
+
+
+/*========================================================
+pseudo-fullscreen-firefox theme: https://github.com/ongots/pseudo-fullscreen-firefox
+
+@import 'pseudo-fullscreen-firefox/chrome/userChrome.css';
+======================================================== */
