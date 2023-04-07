@@ -83,6 +83,7 @@ toolbar .toolbarbutton-1 {
 #urlbar,
 #urlbar-container,
 #nav-bar {
+  /* BACKGROUND COLOR, IF TRANSPARENT ALLOWS FOR color.firefox.com to determine color*/
   background: #31363b !important;
 }
 
@@ -102,15 +103,15 @@ toolbar .toolbarbutton-1 {
 #PanelUI-button {
   /* display: none; */
   position: fixed;
-    right: 10px !important;
-    margin: 3px 0px 0px 0px !important;
+  right: 10px !important;
+  margin: 3px 0px 0px 0px !important;
 }
 
 .bookmark-item>.toolbarbutton-icon {
   display: none !important;
 }
 
-#PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon[label]: {
+#PlacesToolbarItems>.bookmark-item>.toolbarbutton-icon[label] {
   margin-inline-end: 0px !important;
 }
 
@@ -187,7 +188,7 @@ toolbar .toolbarbutton-1 {
 /* Dark context menus dark & menu popups */
 
 :root {
-  --uc-menu-bkgnd: #31363b;
+  --uc-menu-bkgnd: Menu;
   --uc-menu-color: rgb(230, 230, 230);
   --uc-menu-dimmed: rgba(255, 255, 255, 0.1);
   --uc-menu-disabled: rgb(50, 50, 50);
@@ -317,4 +318,6 @@ tooltip {
   background-color: #31363b !important;
 }
 
-.browserContainer { background-color: #31363b !important;}
+.browserContainer {
+  background-color: #31363b !important;
+}
