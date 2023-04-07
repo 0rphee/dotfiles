@@ -24,8 +24,8 @@ NONEXISTENT 'userContent.css'
 minimalFOX theme: https://github.com/marmmaz/FirefoxCSS 
 I believe, unnecessary
 
-@import 'minimalFOX/userContent.css';
 ======================================================== */
+@import 'minimalFOX/userContent.css';
 
 /*========================================================
 AestheticFox theme: https://github.com/AidanMercer/AestheticFox 
@@ -51,4 +51,3 @@ pseudo-fullscreen-firefox theme: https://github.com/ongots/pseudo-fullscreen-fir
 
 @import 'pseudo-fullscreen-firefox/chrome/userContent.css';
 ======================================================== */
-
