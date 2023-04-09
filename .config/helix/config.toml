@@ -46,4 +46,13 @@ enable = true
 
 [keys.normal]
 ";" = "remove_primary_selection"
+"ret" = ["open_below", "normal_mode"]
 
+[keys.normal.space]
+W = ":write"
+q = ":quit"
+b = ":buffer-close"
+
+[keys.normal."+"]
+b = ":run-shell-command stack build"
+r = ":run-shell-command stack run"
