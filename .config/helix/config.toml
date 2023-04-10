@@ -47,6 +47,9 @@ enable = true
 [keys.normal]
 ";" = "remove_primary_selection"
 "ret" = ["open_below", "normal_mode"]
+# "C-o" = "jump_forward"
+# "C-i" = "jump_backward"
+
 
 [keys.normal.space]
 W = ":write"
