@@ -273,7 +273,7 @@ steps:
       #   > import Data.Foo (foo)
       #
       # Default: false
-      space_surround: false
+      space_surround: true
 
       # Post qualify option moves any qualifies found in import declarations
       # to the end of the declaration. This also adjust padding for any
