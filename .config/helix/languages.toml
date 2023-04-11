@@ -1,6 +1,9 @@
 [[language]]
 name = "haskell"
 roots = ["Setup.hs", "stack.yaml", "*.cabal"]
+auto-format = true
+# formatter = { command = "zsh", args = ["-c", "fourmolu --stdin-input-file $(pwd)" ] }
+formatter = { command = "stylish-haskell", args = [] }
 
 [[language]]
 name = "c-sharp"
@@ -13,10 +16,3 @@ indent = { tab-width = 4, unit = "    " }
 [[language]]
 name = "c"
 indent = { tab-width = 4, unit = "    " }
-# language-server = { command = "OmniSharp" }
-
-# contents of "$HOME/.dotnet/tools/OmniSharp" 
-#!/bin/zsh
-# dotnet "/Users/roger/.dotnet/omnisharp-osx-arm64-net6.0/OmniSharp.dll" --languageserver
-
-
