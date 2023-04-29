@@ -14,12 +14,14 @@ cursorcolumn = true
 bufferline = "always"
 
 [editor.statusline]
-left = ["mode", "diagnostics", "spinner"]
-center = ["file-name"]
-right = ["selections", "position", "file-encoding", "file-type"]
+left = ["mode", "diagnostics", "spinner", "separator", "version-control"]
+center = ["file-name", "file-modification-indicator"]
+right = ["selections", "position", "total-line-numbers", "file-encoding", "file-type"]
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
+goto-reference-include-declaration = false
 
 [editor.cursor-shape]
 insert = "bar"
@@ -54,7 +56,7 @@ enable = true
 [keys.normal.space]
 W = ":write"
 q = ":quit"
-b = ":buffer-close"
+B = ":buffer-close"
 
 [keys.normal."+"]
 b = ":run-shell-command stack build"
