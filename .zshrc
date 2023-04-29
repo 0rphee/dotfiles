@@ -139,7 +139,7 @@ alias ghci='TERM=dumb ghci'
 ONEDRIVE="/Users/roger/Library/CloudStorage/OneDrive-up.edu.mx/"
 
 # alias for opening all helix config files for helix
-alias cfh="hx ~/.config/helix/languages.toml ~/.config/helix/config.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-noctis.toml ~/.config/helix/themes/catpuccin_macchiato.toml ~/.config/helix/themes/theme.toml"
+alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-noctis.toml"
 
 # config for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
