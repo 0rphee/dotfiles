@@ -7,3 +7,9 @@ inherits = "noctis"
 'ui.cursor.match' = { fg = "dark-green", bg = "red", modifiers = ["bold"] } # The matching parentheses of that under the cursor.
 
 'property' = { fg = "red" } # Regex group names.
+
+'ui.virtual.whitespace' = { fg = "light-gray" }
+'ui.virtual.indent-guide' = { fg = "light-gray" } # Indentation guides.
+
+[palette]
+light-gray = "#354e51"
