@@ -1,7 +1,4 @@
-theme = "my-gruvbox"
-# "my-noctis"
-# "onedark" 
-# "onelight"
+theme = "gruvbox_light"
 
 [editor]
 line-number = "relative"
