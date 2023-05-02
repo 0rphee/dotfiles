@@ -42,7 +42,7 @@ change_background() {
       alacritty-themes gruvbox-light
 
       # change helix
-      sed -i '' '1s/.*/theme = "gruvbox_light"/' "/Users/roger/.config/helix/config.toml"
+      sed -i '' '1s/.*/theme = "my-gruvbox-light"/' "/Users/roger/.config/helix/config.toml"
       pkill -USR1 hx
       ;;
   esac
