@@ -1,6 +1,6 @@
 inherits = "gruvbox"
 
-"punctuation" ={ fg = "orange1", modifiers = ["bold"] }
+"punctuation" = { fg = "orange1", modifiers = ["bold"] }
 "operator" = { fg = "purple1", modifiers = ["bold"] } # Logical (&&, ||) and - I assume - Mathematical (+, %) operators
 
 "warning" = { fg = "yellow1", bg = "bg1" }
@@ -8,7 +8,7 @@ inherits = "gruvbox"
 "info" = { fg = "aqua1", bg = "bg1" }
 "hint" = { fg = "blue1", bg = "bg1" }
 
-"ui.bufferline.active" = { underline = { color = "orange0", style = "line"} } 
+"ui.bufferline.active" = { underline = { color = "orange1", style = "line"} } 
 
 "ui.selection" = { fg = "bg0", bg = "yellow0" }
 # "ui.selection" = { bg = "bg3", modifiers = ["reversed"] }
