@@ -12,10 +12,10 @@ fn + alt - 4 : "${HOME}"/.config/yabai/scripts/show_disk.sh
 fn + alt - 5 : "${HOME}"/.config/yabai/scripts/show_song.sh
 
 # Navigation
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+cmd + alt - h : yabai -m window --focus west
+cmd + alt - j : yabai -m window --focus south
+cmd + alt - k : yabai -m window --focus north
+cmd + alt - l : yabai -m window --focus east
 
 # Moving windows
 lctrl + alt - h : yabai -m window --warp west
