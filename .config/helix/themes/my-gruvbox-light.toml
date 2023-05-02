@@ -1,0 +1,57 @@
+inherits = "my-gruvbox"
+
+"border" = { fg = "fg0", bg = "fg0" }
+
+"ui.linenr.selected" = { fg = "yellow1", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "bg0", bg = "fg0", underline = { color = "orange1", style = "line"}  }
+"ui.statusline.normal" = { fg = "bg0", bg = "fg0"}
+"ui.statusline.insert" = { fg = "bg0", bg = "blue1", modifiers = ["italic"]}
+"ui.statusline.select" = { fg = "bg0", bg = "orange1", modifiers = ["italic"]}
+"ui.statusline.inactive" = { fg = "fg3", bg = "bg0", modifiers = ["underlined"]}
+"ui.statusline.separator" = { bg = "bg0" }
+
+"ui.bufferline" = { fg = "fg2", modifiers = ["underlined"] } 
+"ui.bufferline.active" = { fg = "fg0", bg = "bg1", modifiers = ["italic"], underline = { color = "orange1", style = "line"} } 
+
+"ui.selection" = { bg = "bg2" }
+"ui.selection.primary" = { bg = "bg3" }
+
+"ui.window" = { bg = "bg0" }
+
+[palette]
+bg0 = "#fbf1c7" # main background
+bg1 = "#ebdbb2"
+bg2 = "#d5c4a1"
+bg3 = "#bdae93"
+bg4 = "#a89984"
+
+fg0 = "#282828" # main foreground
+fg1 = "#3c3836"
+fg2 = "#504945"
+fg3 = "#665c54"
+fg4 = "#7c6f64" # gray0
+
+gray0 = "#7c6f64"
+
+# neutral
+red0 = "#9d0006" 
+green0 = "#79740e"
+yellow0 = "#b57614"
+blue0 = "#076678"
+purple0 = "#8f3f71"
+aqua0 = "#427b58"
+orange0 = "#af3a03"
+
+# bright
+red1    = "#cc241d"
+green1  = "#98971a"
+yellow1 = "#d79921"
+blue1   = "#458588"
+purple1 = "#b16386"
+aqua1   = "#427b58"
+orange1 = "#d65d0e"
+
+
+
+
