@@ -126,7 +126,7 @@ source $ZSH/oh-my-zsh.sh
 
 ############# MY PREVIOUS CONFIG ############# without conda
 
-EDITOR=hx
+export EDITOR="/Users/roger/.cargo/bin/hx"
 
 export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
 # export PATH="/usr/local/opt/llvm@12/bin:$PATH"  # location if installed in Intel Mac
