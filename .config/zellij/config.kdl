@@ -238,7 +238,7 @@ on_force_close "quit"
 // Default: default
 //
 // theme "my-gruvbox-light"
-theme "my-gruvbox-dark"
+// theme "my-gruvbox-dark"
 
 // The name of the default layout to load on startup
 // Default: "default"
@@ -310,3 +310,5 @@ theme "my-gruvbox-dark"
 // The folder in which Zellij will look for themes
 //
 // theme_dir "/path/to/my/theme_dir"
+
+theme "my-gruvbox-dark"
