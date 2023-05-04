@@ -88,7 +88,6 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  battery
   stack
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -153,4 +152,18 @@ alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 LFCD="$HOME/.config/lf/lfcd.sh"                                #  pre-built binary, make sure to use absolute path
 if [ -f "$LFCD" ]; then
     source "$LFCD"
+fi
+
+
+# zellij setup --generate-auto-start zsh
+if [[ -z "$ZELLIJ" ]]; then
+    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+        zellij attach -c options --theme $zthembbb
+    else
+        zellij options
+    fi
+
+    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+        exit
+    fi
 fi
