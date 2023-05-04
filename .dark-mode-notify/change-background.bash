@@ -18,6 +18,10 @@ case $mode in
     # Change helix theme to my-gruvbox
     sed -i '' '1s/.*/theme = "my-gruvbox"/' "/Users/roger/.config/helix/config.toml"
     pkill -USR1 hx
+
+    # Change zellij theme
+    sed -i '' '$s/.*/theme "my-gruvbox-dark"/' "/Users/roger/.config/zellij/config.kdl"
+
     ;;
   light)
     # Change alacritty theme to gruvbox-light
@@ -26,7 +30,9 @@ case $mode in
     # Change helix theme to my-gruvbox-light
     sed -i '' '1s/.*/theme = "my-gruvbox-light"/' "/Users/roger/.config/helix/config.toml"
     pkill -USR1 hx
+
+    # Change zellij theme
+    sed -i '' '$s/.*/theme "my-gruvbox-light"/' "/Users/roger/.config/zellij/config.kdl"
     ;;
 esac
 
-change_background
