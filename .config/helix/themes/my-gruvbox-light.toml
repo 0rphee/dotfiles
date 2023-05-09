@@ -35,12 +35,12 @@ fg4 = "#7c6f64" # gray0
 gray0 = "#7c6f64"
 
 # neutral
-red0 = "#9d0006" 
-green0 = "#79740e"
+red0    = "#9d0006" 
+green0  = "#79740e"
 yellow0 = "#b57614"
-blue0 = "#076678"
+blue0   = "#076678"
 purple0 = "#8f3f71"
-aqua0 = "#427b58"
+aqua0   = "#427b58"
 orange0 = "#af3a03"
 
 # bright
@@ -49,7 +49,7 @@ green1  = "#98971a"
 yellow1 = "#d79921"
 blue1   = "#458588"
 purple1 = "#b16386"
-aqua1   = "#427b58"
+aqua1   = "#689d6a"
 orange1 = "#d65d0e"
 
 
