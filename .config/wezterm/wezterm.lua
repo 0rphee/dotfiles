@@ -1,6 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
 local themes = require 'themes'
+local keybindings = require 'keybindings'
 
 -- This table will hold the configuration.
 local config = {}
@@ -18,13 +19,14 @@ config.window_padding = {
   bottom = 0,
 }
 
-local theme_config = themes
 
-config.colors = theme_config.colors
-config.color_scheme = theme_config.color_scheme
+config.colors = themes.colors
+config.color_scheme = themes.color_scheme
 config.use_fancy_tab_bar = false
 config.font = wezterm.font 'Rec Mono Linear'
 
 config.window_decorations = "RESIZE"
+
+config.keys = keybindings
 
 return config
