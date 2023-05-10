@@ -1,0 +1,3 @@
+[submodule "themes"]
+	path = .config/helix/themes
+	url = https://github.com/0rphee/my-helix-themes.git
