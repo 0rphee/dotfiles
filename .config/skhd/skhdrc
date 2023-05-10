@@ -2,7 +2,11 @@
 # alt - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
 
 # opens new alacritty window
-alt - return : "${HOME}"/.config/yabai/scripts/open_alacritty.sh
+# alt - return : "${HOME}"/.config/yabai/scripts/open_alacritty.sh
+
+# opens new WezTerm window
+alt - return : "${HOME}"/.config/yabai/scripts/open_wezterm.sh
+
 
 # Show system statistics
 fn + alt - 1 : "${HOME}"/.config/yabai/scripts/show_cpu.sh
