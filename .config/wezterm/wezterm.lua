@@ -29,4 +29,12 @@ config.window_decorations = "RESIZE"
 
 config.keys = keybindings
 
+config.front_end = "WebGpu"
+config.animation_fps = 1
+config.cursor_blink_rate = 0
+config.cursor_blink_ease_in = 'Constant'
+config.cursor_blink_ease_out = 'Constant'
+
+-- config.exit_behavior = 'CloseOnCleanExit'
+
 return config
