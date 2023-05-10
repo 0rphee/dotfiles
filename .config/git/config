@@ -9,12 +9,21 @@
 [core]
 	excludesfile = /Users/roger/.config/git/.gitignore_global
 	editor = hx
-    pager = delta
+	pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)"
+
+[delta "light-mode"]
+	light = true
+	syntax-theme = gruvbox-light
+
+[delta "dark-mode"]
+	light = false
+	syntax-theme = gruvbox-dark
 
 [interactive]
-    diffFilter = delta --color-only
+    diffFilter = delta --color-only --features "$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo dark-mode || echo light-mode)"
 
 [delta]
+	# features = gruvmax-fang
     navigate = true
 
 [merge]
@@ -23,3 +32,5 @@
 [diff]
     colorMoved = default
 
+[include]
+    path = themes.gitconfig
