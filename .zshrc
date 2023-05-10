@@ -125,10 +125,11 @@ source $ZSH/oh-my-zsh.sh
 
 ############# MY PREVIOUS CONFIG ############# without conda
 
+export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="/Users/roger/.cargo/bin/hx"
+export VISUAL=$EDITOR
 
-export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
-# export PATH="/usr/local/opt/llvm@12/bin:$PATH"  # location if installed in Intel Mac
+# export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
 
 [ -f "/Users/roger/.ghcup/env" ] && source "/Users/roger/.ghcup/env" # ghcup-env
 
@@ -140,7 +141,7 @@ alias ghci='TERM=dumb ghci'
 ONEDRIVE="/Users/roger/Library/CloudStorage/OneDrive-up.edu.mx/"
 
 # alias for opening all helix config files for helix
-alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-noctis.toml"
+alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-gruvbox-light.toml ~/.config/helix/themes/my-noctis.toml"
 
 # config for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -156,14 +157,14 @@ fi
 
 
 # zellij setup --generate-auto-start zsh
-if [[ -z "$ZELLIJ" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach -c options --theme $zthembbb
-    else
-        zellij options
-    fi
+# if [[ -z "$ZELLIJ" ]]; then
+#     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+#         zellij attach -c
+#     else
+#         zellij
+#     fi
 
-    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-        exit
-    fi
-fi
+#     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+#         exit
+#     fi
+# fi
