@@ -155,6 +155,8 @@ if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
 
+# helix project picker
+alias fhx="$XDG_CONFIG_HOME/helix/hxscript.zsh"
 
 # zellij setup --generate-auto-start zsh
 # if [[ -z "$ZELLIJ" ]]; then

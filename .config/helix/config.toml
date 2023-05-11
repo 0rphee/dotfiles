@@ -55,6 +55,9 @@ W = ":write"
 q = ":quit"
 B = ":buffer-close"
 
+[keys.normal."+"]
+b = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
+
 [keys.normal."+"."s"]
 # using zellij
 # b = ":run-shell-command zellij run --floating --name \"stack build\" -- zsh -c \"stack build && echo Build successful!\""
