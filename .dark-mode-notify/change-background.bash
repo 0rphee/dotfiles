@@ -15,6 +15,9 @@ case $mode in
     # Change alacritty theme to gruvbox-dark
     alacritty-themes gruvbox-dark
 
+    # Change kitty theme to Gruvbox Dark
+    kitty +kitten themes --reload-in=all "Gruvbox Dark"
+
     # Change helix theme to my-gruvbox
     sed -i '' '1s/.*/theme = "my-gruvbox"/' "/Users/roger/.config/helix/config.toml"
     pkill -USR1 hx
@@ -26,6 +29,9 @@ case $mode in
   light)
     # Change alacritty theme to gruvbox-light
     alacritty-themes gruvbox-light
+
+    # Change kitty theme to Gruvbox Light
+    kitty +kitten themes --reload-in=all "Gruvbox Light"
 
     # Change helix theme to my-gruvbox-light
     sed -i '' '1s/.*/theme = "my-gruvbox-light"/' "/Users/roger/.config/helix/config.toml"
