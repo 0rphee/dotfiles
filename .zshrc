@@ -156,7 +156,7 @@ if [ -f "$LFCD" ]; then
 fi
 
 # helix project picker
-alias fhx="$XDG_CONFIG_HOME/helix/hxscript.zsh"
+alias fhx=". $XDG_CONFIG_HOME/helix/hxscript.zsh"
 
 # zellij setup --generate-auto-start zsh
 # if [[ -z "$ZELLIJ" ]]; then
