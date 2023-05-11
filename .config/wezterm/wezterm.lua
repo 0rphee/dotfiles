@@ -30,6 +30,7 @@ config.window_decorations = "RESIZE"
 config.keys = keybindings
 
 config.front_end = "WebGpu"
+config.webgpu_power_preference = 'HighPerformance'
 config.animation_fps = 1
 config.cursor_blink_rate = 0
 config.cursor_blink_ease_in = 'Constant'
