@@ -16,7 +16,11 @@ case $mode in
     alacritty-themes gruvbox-dark
 
     # Change kitty theme to Gruvbox Dark
-    kitty +kitten themes --reload-in=all "Gruvbox Dark"
+    # kitty +kitten themes --reload-in=all "Gruvbox Dark"
+
+    total_lines=$(wc -l < "/Users/roger/.config/kitty/kitty.conf")
+    sed -i '' "${total_lines}s/.*/include gruvbox-dark.conf/" "/Users/roger/.config//kitty/kitty.conf"
+    kill -SIGUSR1 $(pgrep -a kitty)
 
     # Change helix theme to my-gruvbox
     sed -i '' '1s/.*/theme = "my-gruvbox"/' "/Users/roger/.config/helix/config.toml"
@@ -31,7 +35,10 @@ case $mode in
     alacritty-themes gruvbox-light
 
     # Change kitty theme to Gruvbox Light
-    kitty +kitten themes --reload-in=all "Gruvbox Light"
+    # kitty +kitten themes --reload-in=all "Gruvbox Light"
+    total_lines=$(wc -l < "/Users/roger/.config/kitty/kitty.conf")
+    sed -i '' "${total_lines}s/.*/include gruvbox-light.conf/" "/Users/roger/.config//kitty/kitty.conf"
+    kill -SIGUSR1 $(pgrep -a kitty)
 
     # Change helix theme to my-gruvbox-light
     sed -i '' '1s/.*/theme = "my-gruvbox-light"/' "/Users/roger/.config/helix/config.toml"
