@@ -5,8 +5,11 @@
 # alt - return : "${HOME}"/.config/yabai/scripts/open_alacritty.sh
 
 # opens new WezTerm window
-alt - return : "${HOME}"/.config/yabai/scripts/open_wezterm.sh
+# alt - return : "${HOME}"/.config/yabai/scripts/open_wezterm.sh
 
+
+# opens new Kitty window
+alt - return : "${HOME}"/.config/yabai/scripts/open_kitty.sh
 
 # Show system statistics
 fn + alt - 1 : "${HOME}"/.config/yabai/scripts/show_cpu.sh
