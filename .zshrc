@@ -124,6 +124,11 @@ source $ZSH/oh-my-zsh.sh
 
 
 ############# MY PREVIOUS CONFIG ############# without conda
+# check ~/.zprofile, ~/.zshenv, and /etc/paths.d/ for directories added to $PATH
+# order of sourcing: https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
+# .zshenv -> .zprofile -> .zshrc -> .zlogin -> .zlogout
+
+LFCD="$HOME/.config/lf/lfcd.sh"                                #  pre-built binary, make sure to use absolute path
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="/Users/roger/.cargo/bin/hx"
