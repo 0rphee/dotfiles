@@ -134,7 +134,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="/Users/roger/.cargo/bin/hx"
 export VISUAL=$EDITOR
 
-# export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+# needed for compiling with ghc (theres no ghc backend for ARM code-gen, the compiler uses llvm (well, supposedly there's native code-gen since 9.2.1)
+export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm@12/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm@12/include"
 
 [ -f "/Users/roger/.ghcup/env" ] && source "/Users/roger/.ghcup/env" # ghcup-env
 
