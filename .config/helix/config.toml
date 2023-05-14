@@ -1,4 +1,4 @@
-theme = "my-gruvbox-light"
+theme = "my-gruvbox"
 
 [editor]
 line-number = "relative"
@@ -56,7 +56,7 @@ q = ":quit"
 B = ":buffer-close"
 
 [keys.normal."+"]
-b = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
+m = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
 
 [keys.normal."+"."s"]
 # using zellij
@@ -64,23 +64,27 @@ b = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
 # r = ":run-shell-command zellij run --floating --name \"stack run\" -- zsh -c \"stack run\""
 
 # using kitty
-# b = ":run-shell-command kitty @ launch --title \"stack build\" --type window --cwd current --copy-env --hold zsh -c \"stack build && echo Build successful!\""
-# r = ":run-shell-command kitty @ launch --title \"stack run\" --type window --cwd current --copy-env --hold zsh -c \"stack run\""
-
-# b = "kitty @ launch--type window --cwd current --copy-env --hold zsh -c \"stack build && echo Build successful!\""
+b = ":run-shell-command kitty @ launch --title \"stack build\" --type window --cwd current --copy-env --hold zsh -c \"stack build && echo Build successful!\""
+r = ":run-shell-command kitty @ launch --title \"stack run\" --type window --cwd current --copy-env --hold zsh -c \"stack run\""
 
 # using wezterm
-
-b = ":run-shell-command wezterm cli split-pane -- zsh -c \"stack build && echo Build successful!; read -s -r -k1\""
-r = ":run-shell-command wezterm cli split-pane -- zsh -c \"stack run; read -s -r -k1\""
+# b = ":run-shell-command wezterm cli split-pane -- zsh -c \"stack build && echo Build successful!; read -s -r -k1\""
+# r = ":run-shell-command wezterm cli split-pane -- zsh -c \"stack run; read -s -r -k1\""
 
 [keys.normal."+"."c"]
+# using zellij
 # b = ":run-shell-command zellij run --floating --name \"g++ main.cpp --std=c++20\" -- zsh -c \"g++ main.cpp --std=c++20 && echo Build successful!\""
 # r = ":run-shell-command zellij run --floating --name \"g++ main.cpp --std=c++20 && ./a.out\" -- zsh -c \"g++ main.cpp --std=c++20 && ./a.out\""
 
+# using kitty
 # b = ":run-shell-command kitty @ launch --title \"g++ main.cpp --std=c++20\" --type window --cwd current --copy-env --hold zsh -c \"g++ main.cpp --std=c++20 && echo Build successful!\""
 # r = ":run-shell-command kitty @ launch --title \"g++ main.cpp --std=c++20 && ./a.out\" --type window --cwd current --copy-env --hold zsh -c \"g++ main.cpp --std=c++20 && ./a.out\""
 
-b = ":run-shell-command wezterm cli split-pane -- zsh -c \"g++ main.cpp --std=c++20 && echo Build successful!; read -s -r -k1\""
-r = ":run-shell-command wezterm cli split-pane -- zsh -c \"g++ main.cpp --std=c++20 && ./a.out;read -s -r -k1\""
+b = ":run-shell-command kitty @ launch --title \"make\" --type window --cwd current --copy-env --hold zsh -c \"make && echo Build successful!\""
+r = ":run-shell-command kitty @ launch --title \"make run\" --type window --cwd current --copy-env --hold zsh -c \"make run\""
+
+
+
+# b = ":run-shell-command wezterm cli split-pane -- zsh -c \"g++ main.cpp --std=c++20 && echo Build successful!; read -s -r -k1\""
+# r = ":run-shell-command wezterm cli split-pane -- zsh -c \"g++ main.cpp --std=c++20 && ./a.out;read -s -r -k1\""
 
