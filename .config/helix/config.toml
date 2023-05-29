@@ -88,3 +88,5 @@ r = ":run-shell-command kitty @ launch --title \"make run\" --type window --cwd 
 # b = ":run-shell-command wezterm cli split-pane -- zsh -c \"g++ main.cpp --std=c++20 && echo Build successful!; read -s -r -k1\""
 # r = ":run-shell-command wezterm cli split-pane -- zsh -c \"g++ main.cpp --std=c++20 && ./a.out;read -s -r -k1\""
 
+[keys.normal."+"."p"]
+r = ":run-shell-command kitty @ launch --title \"python3\" --type window --cwd current --copy-env --hold zsh -c \"python3 main.py && echo Successful run!\""
