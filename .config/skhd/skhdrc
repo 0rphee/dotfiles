@@ -1,3 +1,12 @@
+# change display 
+lctrl + alt + cmd - h : yabai -m display --focus prev
+lctrl + alt + cmd - l : yabai -m display --focus next
+
+# change space
+# lctrl + cmd - h : yabai -m space --focus prev
+# lctrl + cmd - l : yabai -m space --focus next
+
+
 # opens iTerm2
 # alt - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
 
