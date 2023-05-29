@@ -76,10 +76,11 @@ git:
   parseEmoji: false
   diffContextSize: 3 # how many lines of context are shown around a change in diffs
 os:
-  editPreset: '' # see 'Configuring File Editing' section
-  edit: ''
-  editAtLine: ''
-  editAtLineAndWait: ''
+  # editPreset: 'hx {{filename}}' # see 'Configuring File Editing' section
+  edit: 'hx {{filename}}'
+  editAtLine: 'hx {{filename}}:{{line}}'
+  editAtLineAndWait: 'hx {{filename}}:{line}}'
+  editInTerminal: true
   open: ''
   openLink: ''
 refresher:
