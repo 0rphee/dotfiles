@@ -11,6 +11,11 @@ if [[ "$choice" = "scratchpad" ]]; then
 elif [[ -n "$choice" ]]; then
     escapedChoice=$(eval echo $choice)
     cd $escapedChoice
+
+    if [[ "$1" = "-l" ]]; then
+        kitty @ launch --cwd="$PWD" --type="tab" --dont-take-focus lazygit > /dev/null
+    fi
+
     hx $escapedChoice
-    else
 fi
+
