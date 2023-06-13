@@ -21,6 +21,3 @@ indent = { tab-width = 4, unit = "    " }
 name = "python"
 indent = { tab-width = 4, unit = "    " }
 
-[[language]]
-name = "elm"
-indent = { tab-width = 2, unit = "  " }
