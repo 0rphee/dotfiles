@@ -2,7 +2,7 @@
 name = "haskell"
 roots = ["Setup.hs", "stack.yaml", "*.cabal"]
 auto-format = true
-formatter = { command = "zsh", args = ["-c", "fourmolu --stdin-input-file $(pwd)" ] }
+formatter = { command = "zsh", args = ["-c", "fourmolu -d --stdin-input-file $(pwd)/app/Main.hs" ] }
 # formatter = { command = "stylish-haskell", args = [] }
 
 [[language]]
