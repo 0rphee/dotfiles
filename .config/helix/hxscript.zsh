@@ -16,6 +16,10 @@ elif [[ -n "$choice" ]]; then
         kitty @ launch --cwd="$PWD" --type="tab" --dont-take-focus lazygit > /dev/null
     fi
 
-    hx $escapedChoice
+    if [[ "$1" = "-n" ]]; then
+
+    else
+        hx $escapedChoice
+    fi
 fi
 
