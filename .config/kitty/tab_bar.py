@@ -80,7 +80,7 @@ def _draw_left_status(
             c2 = draw_data.inactive_bg.contrast(draw_data.inactive_fg)
             if c1 < c2:
                 screen.cursor.fg = default_bg
-        screen.cursor.fg = separator_fg
+        screen.cursor.fg = prev_fg # separator_fg
         screen.draw(" " + SOFT_SEPARATOR_SYMBOL)
     end = screen.cursor.x
     return end
