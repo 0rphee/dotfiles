@@ -1,4 +1,4 @@
-theme = "my-gruvbox-light"
+theme = "my-gruvbox"
 
 [editor]
 line-number = "relative"
@@ -66,6 +66,8 @@ m = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
 # using kitty
 b = ":run-shell-command kitty @ launch --title \"stack build\" --type window --cwd current --copy-env --hold zsh -c \"stack build && echo Build successful!\""
 r = ":run-shell-command kitty @ launch --title \"stack run\" --type window --cwd current --copy-env --hold zsh -c \"stack run\""
+t = ":run-shell-command kitty @ launch --title \"stack test\" --type window --cwd current --copy-env --hold zsh -c \"stack test\""
+p = ":run-shell-command kitty @ launch --title \"stack bench\" --type window --cwd current --copy-env --hold zsh -c \"stack bench\""
 
 # using wezterm
 # b = ":run-shell-command wezterm cli split-pane -- zsh -c \"stack build && echo Build successful!; read -s -r -k1\""
