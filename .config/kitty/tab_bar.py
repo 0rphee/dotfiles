@@ -1,6 +1,7 @@
 from datetime import datetime
 from kitty.boss import get_boss
 from kitty.fast_data_types import Screen, add_timer, get_options
+from kitty.rgb import Color
 from kitty.utils import color_as_int
 from kitty.tab_bar import (
     DrawData,
@@ -13,13 +14,18 @@ from kitty.tab_bar import (
 )
 
 opts = get_options()
-icon_fg = as_rgb(color_as_int(opts.color16))
-icon_bg = as_rgb(color_as_int(opts.color8))
+icon_fg = as_rgb(color_as_int(opts.background))
+icon_bg = as_rgb(color_as_int(opts.color6))
+
+date_fgcolor = as_rgb(color_as_int(opts.tab_bar_background))
+# date_bgcolor = as_rgb(color_as_int(opts.color9))
+date_bgcolor = as_rgb(color_as_int(Color(251, 74, 52)))
+
+separator_fg = as_rgb(color_as_int(opts.color9))
+
 bat_text_color = as_rgb(color_as_int(opts.color15))
-date_color = as_rgb(color_as_int(opts.color8))
 SEPARATOR_SYMBOL, SOFT_SEPARATOR_SYMBOL = ("", "")
-RIGHT_MARGIN = 1
-# REFRESH_TIME = 1
+RIGHT_MARGIN = 0
 ICON = "  "
 
 def _draw_icon(screen: Screen, index: int) -> int:
@@ -74,8 +80,8 @@ def _draw_left_status(
             c2 = draw_data.inactive_bg.contrast(draw_data.inactive_fg)
             if c1 < c2:
                 screen.cursor.fg = default_bg
+        screen.cursor.fg = separator_fg
         screen.draw(" " + SOFT_SEPARATOR_SYMBOL)
-        screen.cursor.fg = prev_fg
     end = screen.cursor.x
     return end
 
@@ -86,8 +92,9 @@ def _draw_right_status(screen: Screen, is_last: bool, cells: list) -> int:
     draw_attributed_string(Formatter.reset, screen)
     screen.cursor.x = screen.columns - right_status_length
     screen.cursor.fg = 0
-    for color, status in cells:
-        screen.cursor.fg = color
+    for bgColor, fgColor, status in cells:
+        screen.cursor.fg = fgColor
+        screen.cursor.bg = bgColor
         screen.draw(status)
     screen.cursor.bg = 0
     return screen.cursor.x
@@ -113,10 +120,10 @@ def draw_tab(
 ) -> int:
     global right_status_length
     date = datetime.now().strftime(" %d.%m.%Y")
-    cells = [(date_color, date)]
+    cells = [(date_bgcolor, date_fgcolor, date)]
     right_status_length = RIGHT_MARGIN
     for cell in cells:
-        right_status_length += len(str(cell[1]))
+        right_status_length += len(str(cell[2]))
 
     _draw_icon(screen, index)
     _draw_left_status(
