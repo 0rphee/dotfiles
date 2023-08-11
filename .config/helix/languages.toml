@@ -20,6 +20,7 @@ language-servers = ["my-omnisharp"]
 [[language]]
 name = "cpp"
 indent = { tab-width = 4, unit = "    " }
+auto-format = true
 
 [[language]]
 name = "c"
@@ -28,4 +29,4 @@ indent = { tab-width = 4, unit = "    " }
 [[language]]
 name = "python"
 indent = { tab-width = 4, unit = "    " }
-
+auto-format = true
