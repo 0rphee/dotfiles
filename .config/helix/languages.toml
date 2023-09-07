@@ -1,5 +1,5 @@
 [language-server.haskell-language-server.config.haskell]
-"formattingProvider" = "fourmolu"  
+"formattingProvider" = "ourmolu"  
 
 [language-server.my-omnisharp]
 command = "dotnet"
@@ -19,7 +19,7 @@ language-servers = ["my-omnisharp"]
 
 [[language]]
 name = "cpp"
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 auto-format = true
 
 [[language]]
