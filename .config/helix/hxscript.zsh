@@ -4,7 +4,7 @@ choices=$(cat "$HOME/.config/helix/projects")
 choices+="$(echo -e "\nscratchpad")"
 
 # Prompt the user to choose a project
-choice=$(printf '%s' "$choices" | fzf --height=40% --layout=reverse --info=inline --border --margin=1 --padding=1)
+choice=$(printf '%s' "$choices" | fzf --preview="ls {}" --height=40% --layout=reverse --info=inline --border --margin=1 --padding=1)
 
 if [[ "$choice" = "scratchpad" ]]; then
     hx
