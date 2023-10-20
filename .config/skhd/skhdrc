@@ -8,24 +8,24 @@ lctrl + alt + cmd - l : yabai -m display --focus next
 
 
 # opens iTerm2
-# alt - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
+# alt - return : "${HOME}"/.config/skhd/scripts/open_iterm2.sh
 
 # opens new alacritty window
-# alt - return : "${HOME}"/.config/yabai/scripts/open_alacritty.sh
+# alt - return : "${HOME}"/.config/skhd/scripts/open_alacritty.sh
 
 # opens new WezTerm window
-# alt - return : "${HOME}"/.config/yabai/scripts/open_wezterm.sh
+# alt - return : "${HOME}"/.config/skhd/scripts/open_wezterm.sh
 
 
 # opens new Kitty window
-alt - return : "${HOME}"/.config/yabai/scripts/open_kitty.sh
+alt - return : "${HOME}"/.config/skhd/scripts/open_kitty.sh
 
 # Show system statistics
-fn + alt - 1 : "${HOME}"/.config/yabai/scripts/show_cpu.sh
-fn + alt - 2 : "${HOME}"/.config/yabai/scripts/show_mem.sh
-fn + alt - 3 : "${HOME}"/.config/yabai/scripts/show_bat.sh
-fn + alt - 4 : "${HOME}"/.config/yabai/scripts/show_disk.sh
-fn + alt - 5 : "${HOME}"/.config/yabai/scripts/show_song.sh
+fn + alt - 1 : "${HOME}"/.config/skhd/scripts/show_cpu.sh
+fn + alt - 2 : "${HOME}"/.config/skhd/scripts/show_mem.sh
+fn + alt - 3 : "${HOME}"/.config/skhd/scripts/show_bat.sh
+fn + alt - 4 : "${HOME}"/.config/skhd/scripts/show_disk.sh
+fn + alt - 5 : "${HOME}"/.config/skhd/scripts/show_song.sh
 
 # Navigation
 cmd + alt - h : yabai -m window --focus west
