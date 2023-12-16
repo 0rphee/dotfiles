@@ -6,10 +6,15 @@ command = "dotnet"
 args = ["/Users/roger/.dotnet/omnisharp-osx-arm64-net6.0/OmniSharp.dll", "--languageserver" ]
 
 
+[language-server]
+# hacked-hls = { command = "/Users/roger/Documents/Dev/haskell-proj/haskell-language-server/dist-newstyle/build/aarch64-osx/ghc-9.8.1/haskell-language-server-2.4.0.0/x/haskell-language-server/build/haskell-language-server/haskell-language-server", args = ["--lsp"], config = { haskell = { formattingProvider = "stylish-haskell"} } }
+
+
 [[language]]
 name = "haskell"
-roots = ["Setup.hs", "stack.yaml", "*.cabal"]
-auto-format = true
+auto-format = false
+language-servers = [ "haskell-language-server" ]
+# language-servers = [ "hacked-hls" ]
 # formatter = { command = "zsh", args = ["-c", "fourmolu -d --stdin-input-file $(pwd)/app/Main.hs" ] }
 # formatter = { command = "stylish-haskell", args = [] }
 
@@ -19,8 +24,8 @@ language-servers = ["my-omnisharp"]
 
 [[language]]
 name = "cpp"
-indent = { tab-width = 2, unit = "  " }
-auto-format = true
+indent = { tab-width = 4, unit = "    " }
+auto-format = false
 
 [[language]]
 name = "c"

@@ -1,5 +1,6 @@
 ~/.config/helix
 /Users/roger/Documents/Dev/haskell-proj/schedule-maker
+/Users/roger/Documents/Dev/haskell-proj
 /Users/roger/Documents/Dev/up
 /Users/roger/.config/wezterm
 /Users/roger/.config/kitty
@@ -15,3 +16,5 @@
 /Users/roger/Documents/Dev/haskell-proj/stack-lang-interpreter
 /Users/roger/Documents/Dev/haskell-proj/xolsh
 /Users/roger/Documents/Dev/img-to-ascii
+/Users/roger/Documents/Dev/haskell-proj/haskell-language-server
+/Users/roger/Documents/Dev/odin

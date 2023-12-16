@@ -29,7 +29,7 @@ normal = "block"
 hidden = false      # enables ignoring hidden files
 git-ignore = true   # don't show up in file picker when hidden=true 
 ignore = true       # don't show up in file picker when hidden=true
-max-depth = 4
+max-depth = 10
 #  in order to ignore specific files/directories in a proyect,
 #  create a .ignore files with paths
 
@@ -53,7 +53,7 @@ enable = true
 [keys.normal.space]
 W = ":write"
 q = ":quit"
-B = ":buffer-close"
+C = ":buffer-close"
 
 [keys.normal."+"]
 m = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
