@@ -181,3 +181,6 @@ echo "Mamma Mia!" | figlet -f "slant" | lolcat
 
 
 [ -f "/Users/roger/.ghcup/env" ] && source "/Users/roger/.ghcup/env" # ghcup-env
+
+# add brew completions
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
