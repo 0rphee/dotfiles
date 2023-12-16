@@ -34,3 +34,7 @@
 
 [include]
     path = themes.gitconfig
+[pull]
+	rebase = false
+[color]
+	ui = auto
