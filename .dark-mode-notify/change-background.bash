@@ -13,7 +13,7 @@ case $mode in
   dark)
 
     # Change alacritty theme to gruvbox-dark
-    alacritty-themes gruvbox-dark
+    # alacritty-themes gruvbox-dark
 
     # Change kitty theme to Gruvbox Dark
     # kitty +kitten themes --reload-in=all "Gruvbox Dark"
@@ -32,7 +32,7 @@ case $mode in
     ;;
   light)
     # Change alacritty theme to gruvbox-light
-    alacritty-themes gruvbox-light
+    # alacritty-themes gruvbox-light
 
     # Change kitty theme to Gruvbox Light
     # kitty +kitten themes --reload-in=all "Gruvbox Light"
