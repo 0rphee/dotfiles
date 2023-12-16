@@ -135,18 +135,12 @@ export EDITOR="/Users/roger/.cargo/bin/hx"
 export VISUAL=$EDITOR
 
 # needed for compiling with ghc (theres no ghc backend for ARM code-gen, the compiler uses llvm (well, supposedly there's native code-gen since 9.2.1)
-export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/llvm@12/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/llvm@12/include"
-
-[ -f "/Users/roger/.ghcup/env" ] && source "/Users/roger/.ghcup/env" # ghcup-env
+# export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
+# export LDFLAGS="-L/opt/homebrew/opt/llvm@12/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/llvm@12/include"
 
 # haskell package bin installations from: $ stack install
 export PATH="/Users/roger/.local/bin:$PATH" 
-
-alias ghci='TERM=dumb ghci'
-
-ONEDRIVE="/Users/roger/Library/CloudStorage/OneDrive-up.edu.mx/"
 
 # alias for opening all helix config files for helix
 alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-gruvbox-light.toml ~/.config/helix/themes/my-noctis.toml"
@@ -156,6 +150,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# git access to dotfles
 alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
 LFCD="$HOME/.config/lf/lfcd.sh"                                #  pre-built binary, make sure to use absolute path
@@ -178,3 +173,11 @@ alias fhx=". $XDG_CONFIG_HOME/helix/hxscript.zsh"
 #         exit
 #     fi
 # fi
+
+# echo "Mamma Mia!" | figlet -f "alligator" | lolcat
+echo "Mamma Mia!" | figlet -f "slant" | lolcat
+# echo "Mamma Mia!" | figlet -f "3D-ASCII" | lolcat
+# echo "Mamma Mia!" | figlet -f "ANSI Shadow" | lolcat
+
+
+[ -f "/Users/roger/.ghcup/env" ] && source "/Users/roger/.ghcup/env" # ghcup-env

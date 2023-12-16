@@ -1,4 +1,5 @@
 # I suppose, this is the brew setup for the shell?
+# 16.12.2023 the paths from /private/etc/paths are loaded before this
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # this seems to add three times 
