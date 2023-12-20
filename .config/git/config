@@ -6,6 +6,7 @@
 [user]
 	name = 0rphee
 	email = 0rph3e@proton.me
+	signingkey = /Users/roger/.ssh/id_ed25519.pub
 [core]
 	excludesfile = /Users/roger/.config/git/.gitignore_global
 	editor = hx
@@ -38,3 +39,7 @@
 	rebase = false
 [color]
 	ui = auto
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
