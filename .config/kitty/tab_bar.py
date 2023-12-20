@@ -17,16 +17,17 @@ opts = get_options()
 icon_fg = as_rgb(color_as_int(opts.background))
 icon_bg = as_rgb(color_as_int(opts.color6))
 
-date_fgcolor = as_rgb(color_as_int(opts.tab_bar_background))
+date_fgcolor = as_rgb(color_as_int(opts.foreground))
 # date_bgcolor = as_rgb(color_as_int(opts.color9))
-date_bgcolor = as_rgb(color_as_int(Color(251, 74, 52)))
-
+# date_bgcolor = as_rgb(color_as_int(Color(251, 74, 52)))
+date_bgcolor = as_rgb(color_as_int(opts.color1))
 separator_fg = as_rgb(color_as_int(opts.color9))
 
 bat_text_color = as_rgb(color_as_int(opts.color15))
 SEPARATOR_SYMBOL, SOFT_SEPARATOR_SYMBOL = ("", "")
 RIGHT_MARGIN = 0
 ICON = "  "
+
 
 def _draw_icon(screen: Screen, index: int) -> int:
     if index != 1:
@@ -50,6 +51,7 @@ def _draw_left_status(
     is_last: bool,
     extra_data: ExtraData,
 ) -> int:
+    # tab.title = tab.title[:max_title_length]
     if screen.cursor.x >= screen.columns - right_status_length:
         return screen.cursor.x
     tab_bg = screen.cursor.bg
@@ -65,7 +67,9 @@ def _draw_left_status(
         screen.cursor.x = len(ICON)
     screen.draw(" ")
     screen.cursor.bg = tab_bg
-    draw_title(draw_data, screen, tab, index)
+
+    # draw_data.max_tit
+    draw_title(draw_data, screen, tab, index, max_title_length)
     if not needs_soft_separator:
         screen.draw(" ")
         screen.cursor.fg = tab_bg
@@ -80,7 +84,7 @@ def _draw_left_status(
             c2 = draw_data.inactive_bg.contrast(draw_data.inactive_fg)
             if c1 < c2:
                 screen.cursor.fg = default_bg
-        screen.cursor.fg = prev_fg # separator_fg
+        screen.cursor.fg = prev_fg  # separator_fg
         screen.draw(" " + SOFT_SEPARATOR_SYMBOL)
     end = screen.cursor.x
     return end
@@ -108,6 +112,7 @@ def _redraw_tab_bar(_):
 
 right_status_length = -1
 
+
 def draw_tab(
     draw_data: DrawData,
     screen: Screen,
@@ -118,8 +123,18 @@ def draw_tab(
     is_last: bool,
     extra_data: ExtraData,
 ) -> int:
+    global opts, date_fgcolor, date_bgcolor
+    opts = get_options()
+    date_fgcolor = as_rgb(color_as_int(opts.background))
+    # date_bgcolor = as_rgb(color_as_int(opts.color9))
+    # date_bgcolor = as_rgb(color_as_int(Color(251, 74, 52))) 
+    date_bgcolor = as_rgb(color_as_int(opts.color1))
+    # if (Color(204, 36, 29) == opts.color1) 
+    #  Color(248, 85, 82) color1 everforest-dark
+    #  Color(230, 126, 128) color1 everforest-ligth
+    # print(opts.color1)
     global right_status_length
-    date = datetime.now().strftime(" %d.%m.%Y")
+    date = datetime.now().strftime(" %d.%m.%Y ")
     cells = [(date_bgcolor, date_fgcolor, date)]
     right_status_length = RIGHT_MARGIN
     for cell in cells:
@@ -142,4 +157,3 @@ def draw_tab(
         cells,
     )
     return screen.cursor.x
-
