@@ -19,15 +19,19 @@ case $mode in
     # kitty +kitten themes --reload-in=all "Gruvbox Dark"
 
     total_lines=$(wc -l < "/Users/roger/.config/kitty/kitty.conf")
-    sed -i '' "${total_lines}s/.*/include gruvbox-dark.conf/" "/Users/roger/.config//kitty/kitty.conf"
+    # sed -i '' "${total_lines}s/.*/include gruvbox-dark.conf/" "/Users/roger/.config//kitty/kitty.conf"
+    sed -i '' "${total_lines}s/.*/include everforest-dark.conf/" "/Users/roger/.config//kitty/kitty.conf"
     kill -SIGUSR1 $(pgrep -a kitty)
 
     # Change helix theme to my-gruvbox
-    sed -i '' '1s/.*/theme = "my-gruvbox"/' "/Users/roger/.config/helix/config.toml"
+    # sed -i '' '1s/.*/theme = "my-gruvbox"/' "/Users/roger/.config/helix/config.toml"
+
+    # Change helix theme to my-everforest-dark
+    sed -i '' '1s/.*/theme = "my-everforest-dark"/' "/Users/roger/.config/helix/config.toml"
     pkill -USR1 hx
 
     # Change zellij theme
-    sed -i '' '$s/.*/theme "my-gruvbox-dark"/' "/Users/roger/.config/zellij/config.kdl"
+    # sed -i '' '$s/.*/theme "my-gruvbox-dark"/' "/Users/roger/.config/zellij/config.kdl"
 
     ;;
   light)
@@ -37,15 +41,19 @@ case $mode in
     # Change kitty theme to Gruvbox Light
     # kitty +kitten themes --reload-in=all "Gruvbox Light"
     total_lines=$(wc -l < "/Users/roger/.config/kitty/kitty.conf")
-    sed -i '' "${total_lines}s/.*/include gruvbox-light.conf/" "/Users/roger/.config//kitty/kitty.conf"
+    # sed -i '' "${total_lines}s/.*/include gruvbox-light.conf/" "/Users/roger/.config//kitty/kitty.conf"
+    sed -i '' "${total_lines}s/.*/include everforest-light.conf/" "/Users/roger/.config//kitty/kitty.conf"
     kill -SIGUSR1 $(pgrep -a kitty)
 
     # Change helix theme to my-gruvbox-light
     sed -i '' '1s/.*/theme = "my-gruvbox-light"/' "/Users/roger/.config/helix/config.toml"
+
+    # Change helix theme to my-everforest-light
+    sed -i '' '1s/.*/theme = "my-everforest-light"/' "/Users/roger/.config/helix/config.toml"
     pkill -USR1 hx
 
     # Change zellij theme
-    sed -i '' '$s/.*/theme "my-gruvbox-light"/' "/Users/roger/.config/zellij/config.kdl"
+    # sed -i '' '$s/.*/theme "my-gruvbox-light"/' "/Users/roger/.config/zellij/config.kdl"
     ;;
 esac
 
