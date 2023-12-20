@@ -1,4 +1,4 @@
-theme = "my-gruvbox"
+theme = "my-everforest-dark"
 
 [editor]
 line-number = "relative"
@@ -9,6 +9,8 @@ color-modes = true
 cursorline = true
 cursorcolumn = true
 bufferline = "always"
+rulers = [80]
+popup-border = "popup"
 
 [editor.statusline]
 left = ["mode", "diagnostics", "spinner", "separator", "version-control"]
