@@ -1,3 +1,6 @@
+# brew completions
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -9,7 +12,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-ZSH_THEME="my-dash-passion"
+ZSH_THEME="daivasmara"
+# ZSH_THEME="my-dash-passion"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -93,6 +97,8 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#849289" #,bg=cyan,bold,underline"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -146,9 +152,9 @@ export PATH="/Users/roger/.local/bin:$PATH"
 alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-gruvbox-light.toml ~/.config/helix/themes/my-noctis.toml"
 
 # config for pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # git access to dotfles
 alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
@@ -175,7 +181,7 @@ alias fhx=". $XDG_CONFIG_HOME/helix/hxscript.zsh"
 # fi
 
 # echo "Mamma Mia!" | figlet -f "alligator" | lolcat
-echo "Mamma Mia!" | figlet -f "slant" | lolcat
+# echo "Mamma Mia!" | figlet -f "slant" | lolcat
 # echo "Mamma Mia!" | figlet -f "3D-ASCII" | lolcat
 # echo "Mamma Mia!" | figlet -f "ANSI Shadow" | lolcat
 
@@ -183,4 +189,3 @@ echo "Mamma Mia!" | figlet -f "slant" | lolcat
 [ -f "/Users/roger/.ghcup/env" ] && source "/Users/roger/.ghcup/env" # ghcup-env
 
 # add brew completions
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
