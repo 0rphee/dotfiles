@@ -1,0 +1,18 @@
+Config(
+  prefix: "",
+  // Options: Google, Ecosia, Bing, DuckDuckGo, Custom
+  // NOTE: `{}` is replaced by the search query and `https://` is automatically added in front.
+  engines: [
+    Ecosia,
+    Custom(
+      name: "Google Translate",
+      url: "translate.google.com/?sl=auto&tl=es&text={}%0A&op=translate",
+    ),
+    Custom(
+      name: "Github",
+      url: "github.com/search?q={}",
+    ),
+    Google
+  ],
+     
+)

@@ -1,0 +1,59 @@
+* {
+  all: unset;
+  font-family: RecMonoLinear;
+/* font-size: 1rem;*/
+}
+
+/* DOESNT SEEM TO AFFECT ANYTHING
+#window,
+#match,
+#entry,
+#plugin,
+#main { background: transparent; }
+*/
+
+#match.activatable {
+  border-radius: 16px;
+  padding: .3rem .9rem;
+  margin-top: .01rem;
+  border-top: 1px solid #56635f;/*rgba (255,255,255,.1);*/
+}
+#match.activatable:first-child { margin-top: .7rem; }
+#match.activatable:last-child { margin-bottom: .6rem; }
+
+#plugin #match.activatable {
+  border-radius: 10px;
+  padding: .3rem;
+  margin-top: .01rem;
+  margin-bottom: 0;
+}
+
+#match:selected, #match:hover {
+  background: #56635f; /* rgba(255, 255, 255, .1); */
+}
+#entry {
+  background: #3d484d; /* rgba(255,255,255,.05);*/
+  border: 1px solid #4f585e;
+
+  border-radius: 16px;
+  margin: .3rem;
+  padding: .3rem 1rem;
+}
+
+#entry selection {
+  background: #56635f;
+}
+
+list > #plugin {
+  border-radius: 16px;
+  margin: 0 .3rem;
+}
+list > #plugin:first-child { margin-top: .3rem; }
+list > #plugin:last-child { margin-bottom: .3rem; }
+/*list > #plugin { padding: .6rem; } */
+
+box#main {
+  background: #2d353b;
+  border-radius: 12px;
+  padding: 1rem;
+}
