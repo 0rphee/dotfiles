@@ -12,6 +12,10 @@ Config(
       name: "Github",
       url: "github.com/search?q={}",
     ),
+    Custom(
+      name: "Hoogle",
+      url: "hoogle.haskell.org/?hoogle={}&scope=set%3Astackage",
+    ),
     Google
   ],
      
