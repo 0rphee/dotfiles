@@ -1,5 +1,5 @@
 # brew completions
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+# FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -146,7 +146,7 @@ export VISUAL=$EDITOR
 # export CPPFLAGS="-I/opt/homebrew/opt/llvm@12/include"
 
 # haskell package bin installations from: $ stack install
-export PATH="/Users/roger/.local/bin:$PATH" 
+export PATH="~/.local/bin:$PATH" 
 
 # alias for opening all helix config files for helix
 alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-gruvbox-light.toml ~/.config/helix/themes/my-noctis.toml"
@@ -186,6 +186,20 @@ alias fhx=". $XDG_CONFIG_HOME/helix/hxscript.zsh"
 # echo "Mamma Mia!" | figlet -f "ANSI Shadow" | lolcat
 
 
-[ -f "/Users/roger/.ghcup/env" ] && source "/Users/roger/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
-# add brew completions
+
+# ncurses https://stackoverflow.com/questions/63730439/lib64-libtinfo-so-5-no-version-information-available
+# issue when compiling Haskeline (found to interfere with more programs also) /lib64/libtinfo.so.6: no version information available
+# possibly also adding to configure --with-shared?
+# ./configure --prefix=$HOME/opt/ncurses --with-versioned-syms --with-termlib
+# sudo make
+# sudo make install
+
+export LD_LIBRARY_PATH="$HOME/opt/ncurses/lib:$LD_LIBRARY_PATH"
+
+
+
+export PATH=$PATH:$HOME/go/bin
+export GOPATH=$HOME/go;
+export PATH=$PATH:$GOPATH/bin;
