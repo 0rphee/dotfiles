@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=Change theme
+Name=Theme change
 Comment=Shell scripting utility to change themes
 Exec=/home/orphee/.config/hypr/change-theme.sh
-Terminal=true
+Terminal=false
