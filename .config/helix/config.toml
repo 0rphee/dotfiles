@@ -1,4 +1,4 @@
-theme = "my-everforest-dark"
+theme = "current-theme"
 
 [editor]
 line-number = "relative"
@@ -56,6 +56,9 @@ enable = true
 W = ":write"
 q = ":quit"
 C = ":buffer-close"
+[keys.normal.space.space]
+"r" = ":lsp-restart"
+
 
 [keys.normal."+"]
 m = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
