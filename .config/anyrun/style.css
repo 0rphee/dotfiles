@@ -1,64 +1,72 @@
 * {
   all: unset;
-  font-family: RecMonoLinear;
-/* font-size: 1rem;*/
+  font-family: "SF Pro Rounded", RecMonoLinear;
+  font-size: 16px;
 }
 
-/* DOESNT SEEM TO AFFECT ANYTHING
-#window,
-#match,
-#entry,
-#plugin,
-#main { background: transparent; }
-*/
-
-#match.activatable {
-  border-radius: 16px;
-  padding: .3rem .9rem;
-  margin-top: .01rem;
-  border-top: 1px solid #56635f;/*rgba (255,255,255,.1);*/
-}
-#match.activatable:first-child { margin-top: .7rem; }
-#match.activatable:last-child { margin-bottom: .6rem; }
-
-#plugin #match.activatable {
+box#main {
+  background: @background;
+  border: 1px solid @launcher_border;
   border-radius: 10px;
-  padding: .3rem;
-  margin-top: .01rem;
-  margin-bottom: 0;
+  padding: 20px;
+  color: @foreground;
 }
 
-#match:selected, #match:hover {
-  background: #56635f; /* rgba(255, 255, 255, .1); */
-}
+/* text prompt */
 #entry {
-  background: #3d484d; /* rgba(255,255,255,.05);*/
-  border: 1px solid  #4f585e;
-
+  background: @entry_bg;
   border-radius: 16px;
-  margin: .3rem;
-  padding: .3rem 1rem;
+  padding: 10px;
+
+/*  border: 1px solid @entry_border; */
 }
 
 #entry selection {
-  background: #56635f;
+  background: @entry_selection;
 }
 
-list > #plugin {
-  border-radius: 16px;
-  margin: 0 .3rem;
+/* padding of the whole bottom area (below entry box) */
+list#main{
+  padding: 20px 0px;
 }
-list > #plugin:first-child { margin-top: .3rem; }
-list > #plugin:last-child { margin-bottom: .3rem; }
-/*list > #plugin { padding: .6rem; } */
 
-box#main {
+/* plugin name and icon */
+box > box#plugin.horizontal:first-child {
+  border-radius: 10px;
+  background: @plug_icon_and_label_bg;
+  color: @plug_icon_and_label_fg;
+  box-shadow: @plug_icon_and_label_shadow 5px 5px;
+  padding: 10px;
+}
+
+/* margin between each plugin section*/
+list#main > row {
+  margin: 5px 0px;
+}
+
+/* each selectable result*/
+#match.activatable {
+  border-radius: 10px;
+  background: @result_bg;
+  margin: 0px 5px 10px 0px; /* 0px;*/
+  padding: 7px;
+}
+
+#match:selected, #match:hover {
+  background: @result_selected_bg; /* rgba(255, 255, 255, .1); */
+  color: @result_selected_fg;
+  box-shadow: @result_selected_shadow 5px 5px;
+
 /*
-  background: black;
+  border-bottom: 6px solid @bg_green;
+  padding: 7px 7px 1px 7px;
 */
-  background: #2d353b;
-  border: 1px solid #a7c080;
- /* border: 2px solid #d699b6; purple - green #4f585e;*/
-  border-radius: 12px;
-  padding: 1rem;
+
 }
+
+/* hovered selectable result */
+#match:hover {
+  opacity: 0.6;
+}
+
+@import "themes/current-theme.css";
