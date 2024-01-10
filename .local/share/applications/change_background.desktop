@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Background change
+Comment=Shell scripting utility to change background
+Exec=/home/orphee/.config/hypr/change-background.sh
+Terminal=false
