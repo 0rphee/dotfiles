@@ -1,0 +1,268 @@
+/*
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *  
+ * by Stephan Raabe (2023) 
+ * ----------------------------------------------------- 
+*/
+
+
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+* {
+    font-family: "SF Pro Rounded", RecMonoLinear, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    border: none;
+}
+
+window#waybar {
+    border: 2px solid @bar_border;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    background-color: @background;
+    color: @foreground;
+    border-radius: 20px;
+}
+
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+    margin: 3px 0px;
+}
+
+#workspaces button {
+    color: @foreground;
+    margin: 0px 2px;
+    border-radius: 20px;
+    border: 0px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+}
+
+#workspaces button.active {
+    min-width: 40px;
+    opacity: 1;
+    font-weight: 900;
+    border-bottom: 1px solid @workspace_active_border_btm;
+    color: @workspace_active_fg;
+}
+
+#workspaces button:hover {
+    opacity:0.7;
+    background: @background;
+}
+
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    border: 2px solid @bar_border;
+    border-radius: 10px;
+    background: @background;
+    opacity:0.9;
+    padding:20px;
+}
+
+/* -----------------------------------------------------
+ * Current Window name
+ * ----------------------------------------------------- */
+/*
+#window {
+}
+*/
+/* -----------------------------------------------------
+ * Taskbar list of open windows
+ * ----------------------------------------------------- */
+
+#taskbar {
+    margin: 2px;
+    border-radius: 20px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#taskbar button:hover {
+    opacity: .7;
+    border-radius: 20px;
+    background: @foreground;
+}
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+/*
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 5px;
+}
+*/
+
+
+#taskbar,
+#idle_inhibitor,
+#custom-exit,
+#custom-system,
+#clock,
+#pulseaudio,
+#backlight,
+#network,
+#memory,
+#bluetooth,
+#battery,
+#tray {
+    margin-right: 15px;
+}
+
+/* -----------------------------------------------------
+ * Idle Inhibator
+ * ----------------------------------------------------- */
+
+#idle_inhibitor {
+    font-weight: bold;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+
+#idle_inhibitor.activated {
+    background-color: @idle_inhibitor_activated_bg; /*#dc2f2f;*/
+    color: @background;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+/* -----------------------------------------------------
+ * Custom Exit
+ * ----------------------------------------------------- */
+
+#custom-exit {
+/*
+*/
+}
+
+/* -----------------------------------------------------
+ * Hardware Group
+ * ----------------------------------------------------- */
+
+/*
+#custom-system{
+}
+*/
+#disk,#memory,#cpu {
+    color: @hardware_group_fg;
+}
+
+/*#language {
+}
+*/
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+/*
+#clock {
+}
+*/
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+    color: @audio_fg;
+}
+
+/*
+#pulseaudio.muted {
+    color: @textcolor1;
+}
+*/
+/* -----------------------------------------------------
+ * Backlight
+ * ----------------------------------------------------- */
+
+#backlight {
+    color: @screen_fg;
+}
+
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network {
+    color: @wifi_fg;
+}
+
+
+/* -----------------------------------------------------
+ * Bluetooth
+ * ----------------------------------------------------- */
+/* #bluetooth.on, #bluetooth.connected */
+#bluetooth{
+    color: @bluetooth_fg;
+}
+
+/*
+#bluetooth.off {
+}
+*/
+
+/* -----------------------------------------------------
+ * Battery
+ * ----------------------------------------------------- */
+
+#battery {  
+    color: @battery_fg;
+}
+
+@keyframes blink {
+    to {
+        background-color: @foreground;
+        color: @background;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @battery_critical_bg;
+    color: @background;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+/*
+#tray {
+    padding: 0px 15px 0px 0px;
+}
+*/
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+@import "themes/current-theme.css";
