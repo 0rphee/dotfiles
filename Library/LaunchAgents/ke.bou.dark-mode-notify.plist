@@ -8,14 +8,14 @@
     <key>KeepAlive</key>
     <true/>
     <key>StandardErrorPath</key>
-    <string>/Users/roger/.dark-mode-notify/dark-mode-notify-stderr.log</string>
+    <string>/Users/roger/.config/dark-mode-notify/dark-mode-notify-stderr.log</string>
     <key>StandardOutPath</key>
-    <string>/Users/roger/.dark-mode-notify/dark-mode-notify-stdout.log</string>
+    <string>/Users/roger/.config/dark-mode-notify/dark-mode-notify-stdout.log</string>
     <key>ProgramArguments</key>
     <array>
-       <string>/Users/roger/.dark-mode-notify/dark-mode-notify/.build/arm64-apple-macosx/release/dark-mode-notify</string>
+       <string>/Users/roger/.config/dark-mode-notify/dark-mode-notify-repo/.build/arm64-apple-macosx/release/dark-mode-notify</string>
        <string>/bin/bash</string>
-       <string>/Users/roger/.dark-mode-notify/change-background.bash</string>
+       <string>/Users/roger/.config/dark-mode-notify/change-background.sh</string>
     </array>
 </dict>
 </plist>
