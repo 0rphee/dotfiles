@@ -1,5 +1,7 @@
 [language-server.haskell-language-server.config.haskell]
 "formattingProvider" = "ormolu"  
+"plugin" = { "stan" = { "globalOn" = true }}
+
 
 [language-server.my-omnisharp]
 command = "dotnet"
