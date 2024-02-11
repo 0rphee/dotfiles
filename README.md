@@ -8,6 +8,13 @@ Remove shadow effect from screenshots.
 defaults write com.apple.screencapture disable-shadow -bool true ; killall SystemUIServer
 ```
 
+Install [oh-my-zsh](https://ohmyz.sh/) and [homebrew](https://brew.sh/).
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 Get all installed [brew packages](.config/brew/brew_deps.txt).
 
 ```sh
@@ -20,7 +27,3 @@ Install all brew packages.
 xargs brew install < ~/.config/brew/brew_deps.txt   
 ```
 
-Install [oh-my-zsh](https://ohmyz.sh/).
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
