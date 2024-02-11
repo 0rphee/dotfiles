@@ -1,0 +1,16 @@
+chromium
+firefox
+font-symbols-only-nerd-font
+kitty
+obsidian
+raycast
+bat
+btop
+fzf
+gh
+git-delta
+koekeishiya/formulae/skhd
+koekeishiya/formulae/yabai
+lazygit
+lf
+tree
