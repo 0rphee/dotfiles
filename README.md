@@ -27,3 +27,26 @@ Install all brew packages.
 xargs brew install < ~/.config/brew/brew_deps.txt   
 ```
 
+Link the helix runtime directory to the config directory.
+
+```sh
+ln -Fs ~/dev/rust/helix/runtime ~/.config/helix/runtime
+```
+
+Load [dark-mode-notify](https://github.com/bouk/dark-mode-notify) as a service.
+
+```sh
+launchctl load -w ~/Library/LaunchAgents/ke.bou.dark-mode-notify.plist
+
+launchctl list | grep ke.bou
+```
+
+Remove the service
+
+```sh
+launchctl remove ke.bou.dark-mode-notify
+```
+
+
+
+
