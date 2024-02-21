@@ -24,13 +24,19 @@ if [[ -n "$chosen_theme" ]]; then
 
     ln -sf "$HOME/.config/anyrun/themes/${chosen_theme}.css" "$HOME/.config/anyrun/themes/current-theme.css"
 
+    # gsettings set org.gnome.desktop.interface gtk-theme $chosen_theme
+    # ln -fs ${HOME}/.themes/${chosen_theme}/gtk-4.0/* -t "$HOME/.config/gtk-4.0"
+    # cp -fru ${HOME}/.themes/${chosen_theme}/gtk-4.0/* -t "$HOME/.config/gtk-4.0"
+
     if [[ "$chosen_theme" == *"light"* ]]; then
         gsettings set org.gnome.desktop.interface color-scheme 'prefer-light' &
+        gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita' &
     else
         gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &
+        gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' &
     fi
     
-    dunstify "Theme set to: ${chosen_theme}"
+    notify-send -a "change-theme.sh" "Theme set to: ${chosen_theme}"
 else
-    dunstify "No theme selected, no changes made"
+    notify-send -a "change-theme.sh" "No theme selected, no changes made"
 fi
