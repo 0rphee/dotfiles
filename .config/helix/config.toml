@@ -51,14 +51,15 @@ enable = true
 # "C-o" = "jump_forward"
 # "C-i" = "jump_backward"
 
-
 [keys.normal.space]
 W = ":write"
 q = ":quit"
 C = ":buffer-close"
 [keys.normal.space.space]
 "r" = ":lsp-restart"
-
+"f" = [":pipe find $(pwd) -maxdepth 1 | tail -n +2", "toggle_comments"]
+# relative path (takes cwd of helix, but when using <g-f> to open file, takes cwd as the current opened file directory)
+# ls -1 $(pwd)
 
 [keys.normal."+"]
 m = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
