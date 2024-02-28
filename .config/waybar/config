@@ -1,0 +1,287 @@
+// __        __          _                 
+// \ \      / /_ _ _   _| |__   __ _ _ __  
+//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
+//   \ V  V / (_| | |_| | |_) | (_| | |    
+//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
+//                 |___/                   
+//  
+// by Stephan Raabe (2023) 
+// ----------------------------------------------------- 
+//
+{
+    // General Settings
+
+    "layer": "top",
+    "margin-top": 2,
+    "margin-bottom": 0,
+    "margin-left": 2,
+    "margin-right": 2,
+    "spacing": 0,
+    "height": 1,
+
+
+    // Modules Left
+    "modules-left": [
+        // "custom/appmenu",
+        // "custom/settings",
+        // "custom/waybarthemes",
+        // "custom/wallpaper",
+        // START TASK TOOGLE
+        "wlr/taskbar",
+        // END TASK TOOGLE
+        // "group/quicklinks", filemanager and browser buttons
+        "hyprland/window"
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    // Modules Right    
+    "modules-right": [
+        // "custom/updates",
+        "pulseaudio",
+        "backlight",
+        // START BT TOOGLE
+        "bluetooth",
+        // END BT TOOGLE
+        "battery", 
+        // START NETWORK TOOGLE
+        "network",
+        // END NETWORK TOOGLE
+        "group/hardware",
+        // "custom/cliphist",
+        "idle_inhibitor",
+        // START TRAY TOOGLE
+        "tray", // does not seem to start
+        // END TRAY TOOGLE
+        "custom/exit",
+        "clock"
+    ],
+
+    // Workspaces
+    "hyprland/workspaces" : {
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            // "urgent": "",
+            // "active": "",
+            // "default": ""
+        },
+        "persistent-workspaces": {
+            // START WORKSPACES
+    "*": 1
+            // END WORKSPACES
+        }       
+    },
+
+    // Taskbar
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 20,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+        ],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        // "rewrite": { // does not seem to work
+        //     "Firefox Web Browser": "Firefox",
+        // }
+    },
+
+    // Hyprland Window
+    "hyprland/window": {
+        // "rewrite": { // does not seem to work
+        //     "(.*) - Brave": "$1",
+        //     "(.*) - Chromium": "$1",
+        //     "(.*) - Brave Search": "$1",
+        //     "(.*) - Outlook": "$1",
+        //     "(.*) Microsoft Teams": "$1",
+        // },
+        "separate-outputs": true
+    },
+
+    // Cliphist
+    // "custom/cliphist": {
+    //     "format": "",
+    //     "on-click": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh",
+    //     "on-click-right": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh d",
+    //     "on-click-middle": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh w",
+    //     "tooltip": false
+    // },
+    
+    // Power Menu
+    "custom/exit": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    // Keyboard State
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    // System tray
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+
+    // Clock
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // START CLOCK FORMAT
+        "format-alt": "{:%Y-%m-%d}"
+        // END CLOCK FORMAT
+    },
+
+    // System
+    "custom/system": {
+        "format": "",
+        "tooltip": false
+    },
+
+    // CPU
+    "cpu": {
+        "format": "/ C {usage}% ",
+        "on-click": "kitty --single-instance -e btop"
+    },
+
+    // Memory
+    "memory": {
+        "format": "/ M {}% ",
+        "on-click": "kitty --single-instance -e btop",
+        "tooltip-format": "{used:0.1f} of {total} GiB used",
+    },
+
+    // Harddisc space used
+    "disk": {
+        "interval": 30,
+        "format": "D {percentage_used}% ",
+        "path": "/",
+        "on-click": "kitty --single-instance -e btop"
+    }, 
+    // Group Hardware
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        },        
+        "modules": [
+            "custom/system",
+            "disk",
+            "cpu",
+            "memory",
+        ]
+    },
+    
+    // Network
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "nm-applet && killall nm-applet"
+    },
+
+    // Battery
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon}  {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+    // Pulseaudio
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // Backlight
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰹐", "󱩎", "󱩏", "󱩑", "󱩓", "󱩕", "󰛩"],
+        "interval": 60,
+    },
+
+    // Bluetooth
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "",
+        "format-off": "",
+        "interval": 60,
+        "on-click": "blueman-manager"
+    },
+
+    // Other
+    "user": {
+        "format": "{user}",
+        "interval": 60,
+        "icon": false,
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "tooltip": false,
+        "format-icons":{
+            "activated": "Auto lock OFF",
+            "deactivated": "ON"
+        }
+    }
+   
+}
