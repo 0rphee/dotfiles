@@ -20,7 +20,8 @@ if [[ -n "$chosen_theme" ]]; then
     pkill -USR1 kitty &
 
     ln -sf "$HOME/.config/waybar/themes/${chosen_theme}.css" "$HOME/.config/waybar/themes/current-theme.css"
-    pkill waybar; sleep 0.2; hyprctl dispatch exec waybar &
+    pkill -USR2 waybar &
+    # pkill waybar; sleep 0.2; hyprctl dispatch exec waybar &
 
     ln -sf "$HOME/.config/anyrun/themes/${chosen_theme}.css" "$HOME/.config/anyrun/themes/current-theme.css"
 
