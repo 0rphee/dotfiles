@@ -201,3 +201,5 @@ export PATH=$PATH:$HOME/go/bin
 export GOPATH=$HOME/go;
 export PATH=$PATH:$GOPATH/bin;
 
+eval "$(zoxide init zsh --cmd j)"
+eval "$(zoxide init zsh --cmd cd)"
