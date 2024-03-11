@@ -95,6 +95,7 @@ plugins=(
   stack
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-vi-mode # https://github.com/jeffreytse/zsh-vi-mode
 )
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#849289" #,bg=cyan,bold,underline"
