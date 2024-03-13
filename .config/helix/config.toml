@@ -54,6 +54,7 @@ enable = true
 [keys.normal.space]
 W = ":write"
 q = ":quit"
+Q = ":quit!"
 C = ":buffer-close"
 [keys.normal.space.space]
 "r" = ":lsp-restart"
