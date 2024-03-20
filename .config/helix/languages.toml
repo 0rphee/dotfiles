@@ -2,30 +2,14 @@
 "formattingProvider" = "ormolu"  
 "plugin" = { "stan" = { "globalOn" = true }}
 
-
 [language-server.my-omnisharp]
 command = "dotnet"
 args = ["/Users/roger/.dotnet/omnisharp-osx-arm64-net6.0/OmniSharp.dll", "--languageserver" ]
-
-##############################################################
-# hacked-hls
-##############################################################
-[language-server.hacked-hls]
-command = "/Users/roger/dev/haskell/haskell-language-server/dist-newstyle/build/aarch64-osx/ghc-9.6.3/haskell-language-server-2.6.0.0/x/haskell-language-server/build/haskell-language-server/haskell-language-server"
-args = ["--lsp", "--debug"]
-
-[language-server.hacked-hls.config.haskell]
-formattingProvider = "stylish-haskell"
-plugin = { stan = { globalOn = true } }
-##############################################################
  
 [[language]]
 name = "haskell"
 auto-format = false
 language-servers = [ "haskell-language-server" ]
-# language-servers = [ "hacked-hls" ]
-# formatter = { command = "zsh", args = ["-c", "fourmolu -d --stdin-input-file $(pwd)/app/Main.hs" ] }
-# formatter = { command = "stylish-haskell", args = [] }
 
 [[language]]
 name = "c-sharp"

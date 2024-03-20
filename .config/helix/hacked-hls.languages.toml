@@ -1,0 +1,13 @@
+[language-server.hacked-hls]
+command = "/path/path"
+args = ["--lsp", "--debug"]
+
+[language-server.hacked-hls.config.haskell]
+formattingProvider = "stylish-haskell"
+plugin = { stan = { globalOn = true } }
+##############################################################
+ 
+[[language]]
+name = "haskell"
+auto-format = false
+language-servers = [ "hacked-hls" ]
