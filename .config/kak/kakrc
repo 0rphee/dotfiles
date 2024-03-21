@@ -1,0 +1,64 @@
+colorscheme gruvbox-dark
+
+add-highlighter global/ number-lines
+
+# buffer-next/buffer-previous:  gn gp
+map -docstring "goto next buffer" global goto n "<esc>: buffer-next<ret>"
+map -docstring "goto previous buffer" global goto p "<esc>: buffer-previous<ret>"
+
+# deletye-buffer/delete-buffer! <space>C <space>C
+map -docstring "close current buffer" global user c ": delete-buffer<ret>"
+map -docstring "CLOSE CURRENT BUFFER! even if the buffer is not saved" global user C ": delete-buffer!<ret>"
+
+# quit/quit! <space>C <space>C
+map -docstring "quit session" global user q ": quit<ret>"
+map -docstring "QUIT!!! even if some buffers are not saved" global user Q ": quit!<ret>"
+
+# write/write! <space>C <space>C
+map -docstring "write current file" global user w ": write<ret>"
+map -docstring "WRITE CURRENT FILE! even when the file is protected" global user W ": write!<ret>"
+
+# comment lines (like helix)
+map -docstring "comment-out current line" global normal <c-a-c> ":comment-line<ret>"
+
+# copy to system clipboard [MAC ONLY]
+map -docstring "copy to system clipboard" global user y "<a-|> pbcopy<ret>"
+
+# alt kitty window split command
+define-command kitty-terminal-window-splits -params 1.. -docstring '
+kitty-terminal-window <vsplit|hsplit> <program> [<arguments>]: create a new terminal as a kitty window
+The program passed as argument will be executed in the new terminal' \
+%{
+    nop %sh{
+        match=""
+        if [ -n "$kak_client_env_KITTY_WINDOW_ID" ]; then
+            match="--match=window_id:$kak_client_env_KITTY_WINDOW_ID"
+        fi
+
+        listen=""
+        if [ -n "$kak_client_env_KITTY_LISTEN_ON" ]; then
+            listen="--to=$kak_client_env_KITTY_LISTEN_ON"
+        fi
+
+        split_loc=$1
+      	shift 1
+
+        rest=""
+        if [ ${#@} -gt 1 ]; then
+            rest="-e $@"
+        fi
+
+        kitty @ $listen launch --no-response --location "$split_loc" --type="$kak_opt_kitty_window_type" --cwd="$PWD" $match kak -c $kak_session $rest
+    }
+}
+complete-command kitty-terminal-window-splits shell
+
+
+map -docstring "create new kakoune vsplit in kitty" global user v ": kitty-terminal-window-splits vsplit<ret>"
+map -docstring "create new kakoune hsplit in kitty" global user s ": kitty-terminal-window-splits hsplit<ret>"
+
+
+
+
+
+
