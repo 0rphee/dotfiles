@@ -12,7 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-ZSH_THEME="daivasmara"
+# ZSH_THEME="daivasmara"
 # ZSH_THEME="my-dash-passion"
 
 # Set list of themes to pick from when loading at random
@@ -137,17 +137,10 @@ source $ZSH/oh-my-zsh.sh
 
 LFCD="$HOME/.config/lf/lfcd.sh"                                #  pre-built binary, make sure to use absolute path
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export EDITOR="/Users/roger/.cargo/bin/hx"
-export VISUAL=$EDITOR
-
 # needed for compiling with ghc (theres no ghc backend for ARM code-gen, the compiler uses llvm (well, supposedly there's native code-gen since 9.2.1)
 # export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
 # export LDFLAGS="-L/opt/homebrew/opt/llvm@12/lib"
 # export CPPFLAGS="-I/opt/homebrew/opt/llvm@12/include"
-
-# haskell package bin installations from: $ stack install
-export PATH="~/.local/bin:$PATH" 
 
 # alias for opening all helix config files for helix
 alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-gruvbox-light.toml ~/.config/helix/themes/my-noctis.toml"
@@ -168,27 +161,10 @@ fi
 # helix project picker
 alias fhx=". $XDG_CONFIG_HOME/helix/hxscript.zsh"
 
-# zellij setup --generate-auto-start zsh
-# if [[ -z "$ZELLIJ" ]]; then
-#     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-#         zellij attach -c
-#     else
-#         zellij
-#     fi
-
-#     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-#         exit
-#     fi
-# fi
-
 # echo "Mamma Mia!" | figlet -f "alligator" | lolcat
 # echo "Mamma Mia!" | figlet -f "slant" | lolcat
 # echo "Mamma Mia!" | figlet -f "3D-ASCII" | lolcat
 # echo "Mamma Mia!" | figlet -f "ANSI Shadow" | lolcat
-
-
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
-
 
 # ncurses https://stackoverflow.com/questions/63730439/lib64-libtinfo-so-5-no-version-information-available
 # issue when compiling Haskeline (found to interfere with more programs also) /lib64/libtinfo.so.6: no version information available
@@ -198,9 +174,16 @@ alias fhx=". $XDG_CONFIG_HOME/helix/hxscript.zsh"
 # sudo make install
 # export LD_LIBRARY_PATH="$HOME/opt/ncurses/lib:$LD_LIBRARY_PATH"
 
-export PATH=$PATH:$HOME/go/bin
-export GOPATH=$HOME/go;
-export PATH=$PATH:$GOPATH/bin;
-
 eval "$(zoxide init zsh --cmd j)"
 eval "$(zoxide init zsh --cmd cd)"
+
+# prompt
+eval "$(starship init zsh)"
+
+# kakoune global sesion allias
+# alias ka="$HOME/.config/kak/ka.sh"
+alias k='kks edit'
+alias ks='eval $(kks-select)'
+alias ka='kks attach'
+alias kkd='kks kill; unset KKS_SESSION KKS_CLIENT' # kill+detach
+alias kcd='cd $(kks get %sh{pwd})'
