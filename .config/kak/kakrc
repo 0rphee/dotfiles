@@ -1,10 +1,18 @@
-colorscheme gruvbox-dark
+# scroll-off (margin around the cursor)
+# 8 lines, 3 columns
+set-option global scrolloff 8,3
 
 # add line numbers
-add-highlighter global/ number-lines
+add-highlighter global/ number-lines -relative -hlcursor
 
 # add softwrap
 add-highlighter global/ wrap -indent -marker '↪ '
+
+# add whitespace rendering
+add-highlighter global/ show-whitespaces
+
+# add highlighting of matching brackets/braces/etc
+add-highlighter global/ show-matching
 
 # buffer-next/buffer-previous:  gn gp
 map -docstring "goto next buffer" global goto n "<esc>: buffer-next<ret>: info buffer-next<ret>"
@@ -19,14 +27,16 @@ map -docstring "quit session" global user q ": quit<ret>"
 map -docstring "QUIT!!! even if some buffers are not saved" global user Q ": quit!<ret>"
 
 # write/write! <space>C <space>C
-map -docstring "write current file" global user w ": write<ret>: info 'current file written'<ret>"
-map -docstring "WRITE CURRENT FILE! even when the file is protected" global user W ": write!<ret>: info 'current file FORCEFULLY written!'<ret>"
+map -docstring "write current file" global user W ": write<ret>: info 'current file written'<ret>"
+# map -docstring "WRITE CURRENT FILE! even when the file is protected" global user W ": write!<ret>: info 'current file FORCEFULLY written!'<ret>"
 
 # comment lines (like helix)
 map -docstring "comment-out current line" global normal <c-a-c> ":comment-line<ret>"
 
-# copy to system clipboard [MAC ONLY]
+# copy/paste to system clipboard [MAC ONLY]
 map -docstring "copy to system clipboard" global user y "<a-|> pbcopy<ret>: info 'selection copied to system clipboard'<ret>"
+map -docstring "paste before selection from system clipboard" global user P "! pbpaste<ret>: info 'system clipboard pasted before selection'<ret>"
+map -docstring "paste after selection from system clipboard" global user p "<a-!> pbpaste<ret>: info 'system clipboard pasted after selection'<ret>"
 
 # alt kitty window split command
 define-command kitty-terminal-window-splits -params 1.. -docstring '
@@ -55,13 +65,17 @@ The program passed as argument will be executed in the new terminal' \
         kitty @ $listen launch --no-response --location "$split_loc" --type="$kak_opt_kitty_window_type" --cwd="$PWD" $match kak -c $kak_session $rest
     }
 }
-complete-command kitty-terminal-window-splits shell
 
+complete-command kitty-terminal-window-splits command
 
-map -docstring "create new kakoune vsplit in kitty" global user v ": kitty-terminal-window-splits vsplit<ret>: info 'kitty kak vsplit created'<ret>"
-map -docstring "create new kakoune hsplit in kitty" global user s ": kitty-terminal-window-splits hsplit<ret>: info 'kitty kak hsplit created'<ret>"
+# imitates helix keybindings 
+declare-user-mode user-window
+map -docstring "user mode for managing kakoune clients in the same session" global user w ": enter-user-mode user-window<ret>"
 
-# Use Tab for both indenting and completion
+map -docstring "create new kakoune vsplit in kitty" global user-window v ": kitty-terminal-window-splits vsplit<ret>: info 'kitty kak vsplit created'<ret>"
+map -docstring "create new kakoune hsplit in kitty" global user-window s ": kitty-terminal-window-splits hsplit<ret>: info 'kitty kak hsplit created'<ret>"
+
+# Use Tab for both indenting and completion from wiki
 hook global InsertCompletionShow .* %{
     try %{
         # this command temporarily removes cursors preceded by whitespace;
@@ -77,7 +91,44 @@ hook global InsertCompletionShow .* %{
         }
     }
 }
+
 # change tabs to spaces
 map global insert <tab> '<a-;><a-gt>'
 map global insert <s-tab> '<a-;><a-lt>'
+
+# plugin manager, kak-bundle (https://github.com/jdugan6240/kak-bundle)
+source "%val{config}/bundle/kak-bundle/rc/kak-bundle.kak"
+bundle-noload kak-bundle https://github.com/jdugan6240/kak-bundle.git
+
+bundle kak-crosshairs https://github.com/insipx/kak-crosshairs.git %{
+    crosshairs
+}
+
+# kakship - statusline
+bundle kakship https://git.itsufficient.me/rust/kakship.git %{
+    kakship-enable
+}
+
+bundle-install-hook kakship %{
+  cargo install --locked --force --path .
+  [ ! -e $kak_config/starship.toml ] && cp starship.toml $kak_config/
+}
+
+# fzf.kak
+bundle fzf.kak https://github.com/andreyorst/fzf.kak.git %{
+    map -docstring "fzf-mode" global user m ": fzf-mode<ret>"
+}
+
+# kks sessions (https://github.com/kkga/kks)
+# eval %sh{ kks init }
+
+# map global user f -docstring 'files'       ': kks-connect terminal zsh -c kks-files<ret>'
+# map global user F -docstring 'files (all)' ': kks-connect terminal zsh -c kks-files -HI<ret>'
+# map global user g -docstring 'git files'   ': kks-connect terminal zsh -c kks-git-files<ret>'
+# map global user b -docstring 'buffers'     ': kks-connect terminal zsh -c kks-buffers <ret>'
+# map global user / -docstring 'live grep'   ': kks-connect terminal zsh -c kks-grep<ret>'
+
+
+# colorscheme loaded at the end because if not, the line colors from kak-crosshairs from the colorschemes are not loaded properly
+colorscheme current-theme
 
