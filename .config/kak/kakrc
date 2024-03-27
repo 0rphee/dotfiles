@@ -119,16 +119,6 @@ bundle fzf.kak https://github.com/andreyorst/fzf.kak.git %{
     map -docstring "fzf-mode" global user m ": fzf-mode<ret>"
 }
 
-# kks sessions (https://github.com/kkga/kks)
-# eval %sh{ kks init }
-
-# map global user f -docstring 'files'       ': kks-connect terminal zsh -c kks-files<ret>'
-# map global user F -docstring 'files (all)' ': kks-connect terminal zsh -c kks-files -HI<ret>'
-# map global user g -docstring 'git files'   ': kks-connect terminal zsh -c kks-git-files<ret>'
-# map global user b -docstring 'buffers'     ': kks-connect terminal zsh -c kks-buffers <ret>'
-# map global user / -docstring 'live grep'   ': kks-connect terminal zsh -c kks-grep<ret>'
-
-
 # colorscheme loaded at the end because if not, the line colors from kak-crosshairs from the colorschemes are not loaded properly
 colorscheme current-theme
 
