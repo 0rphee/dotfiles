@@ -119,6 +119,8 @@ bundle kak-crosshairs https://github.com/insipx/kak-crosshairs.git %{
 # tabs.kak
 bundle tabs.kak https://github.com/enricozb/tabs.kak.git %{
     map -docstring "tabs" global goto T "<esc>: enter-user-mode tabs<ret>"
+    set-option global tabs_modelinefmt %{
+        %val{cursor_line}:%val{cursor_char_column} {{context_info}} {{mode_info}} >>= %val{client}@[%val{session}] }
 }
 
 bundle-install-hook tabs.kak %{
@@ -127,8 +129,6 @@ bundle-install-hook tabs.kak %{
 
 # fzf.kak
 bundle fzf.kak https://github.com/andreyorst/fzf.kak.git %{
-    set-option global tabs_modelinefmt %{
-        %val{cursor_line}:%val{cursor_char_column} {{context_info}} {{mode_info}} >>= %val{client}@[%val{session}] } 
     map -docstring "fzf-mode" global user f ": fzf-mode<ret>"
 }
 
@@ -151,6 +151,7 @@ bundle kakoune-surround https://github.com/h-youhei/kakoune-surround.git %{
 # 'disable-auto-pairs' or 'enable-auto-pairs'
 bundle auto-pairs.kak https://github.com/alexherbo2/auto-pairs.kak.git %{
     enable-auto-pairs
+}
 
 # kakoune-lsp
 bundle kakoune-lsp https://github.com/kakoune-lsp/kakoune-lsp.git %{
@@ -160,7 +161,14 @@ bundle kakoune-lsp https://github.com/kakoune-lsp/kakoune-lsp.git %{
     map global user r %{: lsp-rename-prompt<ret>} -docstring "LSP rename"
     map global user s %{: lsp-workspace-symbol<ret>} -docstring "LSP show workspace symbols"
 
-    lsp-inline-diagnostics-enable
+    lsp-inline-diagnostics-enable global
+
+    lsp-inlay-hints-enable global
+
+    # requires >= 2024
+    lsp-inlay-code-lenses-enable global
+    # requires >= 2024
+    lsp-inlay-diagnostics-enable global
 
     hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp|haskell) %{
         lsp-enable-window
