@@ -180,10 +180,10 @@ eval "$(zoxide init zsh --cmd cd)"
 # prompt
 eval "$(starship init zsh)"
 
-# kakoune global sesion allias
-# alias ka="$HOME/.config/kak/ka.sh"
-alias k='kks edit'
-alias ks='eval $(kks-select)'
-alias ka='kks attach'
-alias kkd='kks kill; unset KKS_SESSION KKS_CLIENT' # kill+detach
-alias kcd='cd $(kks get %sh{pwd})'
+# gnu tools (for compiling kakoune) from homebrew:
+# GNU "make" has been installed as "gmake".
+# If you need to use it as "make", you can add a "gnubin" directory
+# to your PATH from your bashrc like:
+# in .zshrc instead of .zshenv, to be before /usr/bin (and the original make)
+
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
