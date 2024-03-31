@@ -180,10 +180,3 @@ eval "$(zoxide init zsh --cmd cd)"
 # prompt
 eval "$(starship init zsh)"
 
-# gnu tools (for compiling kakoune) from homebrew:
-# GNU "make" has been installed as "gmake".
-# If you need to use it as "make", you can add a "gnubin" directory
-# to your PATH from your bashrc like:
-# in .zshrc instead of .zshenv, to be before /usr/bin (and the original make)
-
-export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
