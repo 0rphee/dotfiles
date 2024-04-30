@@ -28,3 +28,13 @@ indent = { tab-width = 4, unit = "    " }
 name = "python"
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = false
+
+[[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = false

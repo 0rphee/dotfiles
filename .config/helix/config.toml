@@ -11,6 +11,7 @@ cursorcolumn = true
 bufferline = "always"
 rulers = [80]
 popup-border = "popup"
+insert-final-newline = false
 
 [editor.statusline]
 left = ["mode", "diagnostics", "spinner", "separator", "version-control"]
