@@ -153,6 +153,10 @@ alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.conf
 # git access to dotfles
 alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
+alias configlg='/opt/homebrew/bin/lazygit --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
+
+alias lg=lazygit
+
 LFCD="$HOME/.config/lf/lfcd.sh"                                #  pre-built binary, make sure to use absolute path
 if [ -f "$LFCD" ]; then
     source "$LFCD"
@@ -183,6 +187,3 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-alias lg=lazygit
-
