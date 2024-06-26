@@ -34,50 +34,30 @@ gaps["inner"]="3"
 
 # ===== Tiling setting =========================
 
-yabai -m config layout                      bsp
-
-yabai -m config top_padding                 "${gaps["top"]}"
-yabai -m config bottom_padding              "${gaps["bottom"]}"
-yabai -m config left_padding                "${gaps["left"]}"
-yabai -m config right_padding               "${gaps["right"]}"
-yabai -m config window_gap                  "${gaps["inner"]}"
-
-yabai -m config mouse_follows_focus         off
-yabai -m config focus_follows_mouse         off
-
-# yabai -m config window_topmost              off # removed yabai 6.0.0
-yabai -m config window_opacity              off
-yabai -m config window_shadow               float
-
-
-# BORDER COLOR REMOVED IN yabai 6.0.0
-# yabai -m config window_border               on
-# yabai -m config window_border_width         2
-# yabai -m config window_border_radius        10
-
-# yabai -m config active_window_border_color "0xFF689d6a" 
-# # "0xFFd65d0e" -- gruvbox orange
-# # "0xFFfabd2f" -- gruvbox yellow
-# # "0xFF689d6a" -- gruvbox aqua
-# # "0xccFFFFFF" -- white
-# # "0xFF48E9A7"
-# # "${color["focused"]}"
-# yabai -m config normal_window_border_color "0x66FFFFFF"  
-# # "0xbb918CFF" 
-# # "0xEB918CFF"
-# # "${color["normal"]}"
-# yabai -m config insert_feedback_color       "0xFFffa864" 
-# # "${color["preselect"]}"
-
-yabai -m config active_window_opacity       1.0
-yabai -m config normal_window_opacity       0.50
-yabai -m config split_ratio                 0.50
-
-yabai -m config auto_balance                off
-
-yabai -m config mouse_modifier              fn
-yabai -m config mouse_action1               move
-yabai -m config mouse_action2               resize
+yabai -m config                                 \
+  layout                   bsp                  \
+                                                \
+  top_padding              "${gaps["top"]}"     \
+  bottom_padding           "${gaps["bottom"]}"  \
+  left_padding             "${gaps["left"]}"    \
+  right_padding            "${gaps["right"]}"   \
+  window_gap               "${gaps["inner"]}"   \
+                                                \
+  mouse_follows_focus      off                  \
+  focus_follows_mouse      off                  \
+                                                \
+  window_opacity           off                  \
+  window_shadow            float                \
+                                                \
+  active_window_opacity    1.0                  \
+  normal_window_opacity    0.50                 \
+  split_ratio              0.50                 \
+                                                \
+  auto_balance             off                  \
+                                                \
+  mouse_modifier           fn                   \
+  mouse_action1            move                 \
+  mouse_action2            resize               \
 
 # ===== Rules ==================================
 
