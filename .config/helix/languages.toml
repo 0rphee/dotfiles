@@ -1,5 +1,5 @@
 [language-server.haskell-language-server.config.haskell]
-"formattingProvider" = "ormolu"  
+"formattingProvider" = "fourmolu"
 "plugin" = { "stan" = { "globalOn" = true }}
 
 [language-server.my-omnisharp]
@@ -38,3 +38,7 @@ auto-format = false
 name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = false
+
+[[language]]
+name = "markdown"
+formatter = { command = "prettier" , args = ["--parser", "markdown"] }

@@ -2,8 +2,8 @@ theme = "current-theme"
 
 [editor]
 line-number = "relative"
-idle-timeout = 30
-completion-trigger-len = 1
+idle-timeout = 100
+completion-trigger-len = 2
 scrolloff = 5  # default 5
 color-modes = true
 cursorline = true
@@ -51,12 +51,14 @@ enable = true
 "ret" = ["open_below", "normal_mode"]
 # "C-o" = "jump_forward"
 # "C-i" = "jump_backward"
+"A-," = ["goto_next_diag", ":yank-diagnostic", ":vsplit-new", "paste_clipboard_after"]
 
 [keys.normal.space]
 W = ":write"
 q = ":quit"
 Q = ":quit!"
-C = ":buffer-close"
+c = ":buffer-close"
+C = ":buffer-close!"
 [keys.normal.space.space]
 "r" = ":lsp-restart"
 "f" = [":pipe find $(pwd) -maxdepth 1 | tail -n +2", "toggle_comments"]
