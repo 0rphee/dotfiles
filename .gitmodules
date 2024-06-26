@@ -1,4 +1,4 @@
-[submodule "themes"]
+[submodule ".config/helix/themes"]
 	path = .config/helix/themes
 	url = https://github.com/0rphee/my-helix-themes.git
 [submodule ".config/dark-mode-notify/dark-mode-notify-repo"]
