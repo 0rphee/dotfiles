@@ -1,2 +1,63 @@
+.config/btop/btop.log
+.config/cabal
+
+# .config/dark-mode-notify
+.config/dark-mode-notify/dark-mode-notify-stderr.log
+.config/dark-mode-notify/dark-mode-notify-stdout.log
+
+# here is the bare repo
+.config/dotfiles
+
+.config/gh
+.config/ghc/ghci_history
 .config/helix/runtime
 .config/kitty/themes/current-theme.conf
+.config/nvm
+.cache/
+.cargo/
+.conda/
+.cups/
+.docker/
+.elm/
+.ghcup/
+.ghc/
+.ipython/
+.keras/
+# .local/
+.local/bin
+.local/share/delta
+.local/state/cabal/store/ghc-9.6.5
+.local/state/gh
+.matplotlib/
+.npm/
+# .oh-my-zsh
+.rustup/
+.ssh/
+.stack/
+.swiftpm/
+.vscode/
+.zsh_sessions/
+Desktop/
+Documents/
+Downloads/
+Library/*
+!Library/LaunchAgents
+Movies/
+Music/
+Pictures/
+Public/
+dev/
+go/
+.CFUserTextEncoding
+.bash_history
+.lesshst
+.node_repl_history
+# .profile
+.python_history
+.viminfo
+.zcompdump-*
+.zsh_history
+.config/lazygit/state.yml
+.config/btop
+Library/LaunchAgents/com.koekeishiya.skhd.plist
+Library/LaunchAgents/com.koekeishiya.yabai.plist
