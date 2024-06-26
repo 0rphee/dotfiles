@@ -76,11 +76,11 @@ git:
     parseEmoji: false
     diffContextSize: 3 # how many lines of context are shown around a change in diffs
 os:
-    # editPreset: 'hx {{filename}}' # see 'Configuring File Editing' section
-    edit: 'hx {{filename}}'
-    editAtLine: 'hx {{filename}}:{{line}}'
-    editAtLineAndWait: 'hx {{filename}}:{line}}'
-    editInTerminal: true
+    editPreset: helix (hx) # see 'Configuring File Editing' section
+    # edit: 'hx {{filename}}'
+    # editAtLine: 'hx {{filename}}:{{line}}'
+    # editAtLineAndWait: 'hx {{filename}}:{line}}'
+    # editInTerminal: true
     open: ''
     openLink: ''
 refresher:
@@ -119,7 +119,7 @@ keybinding:
         jumpToBlock: ['1', '2', '3', '4', '5'] # goto the Nth block / panel
         nextMatch: 'n'
         prevMatch: 'N'
-        optionMenu: null # show help menu
+        optionMenu: <disabled> # show help menu
         optionMenu-alt1: '?' # show help menu
         select: '<space>'
         goInto: '<enter>'
