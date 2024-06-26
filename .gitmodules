@@ -7,3 +7,6 @@
 [submodule ".config/kak"]
 	path = .config/kak
 	url = git@github.com:0rphee/kak-config.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git@github.com:ohmyzsh/ohmyzsh.git
