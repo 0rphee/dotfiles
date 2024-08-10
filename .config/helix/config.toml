@@ -12,6 +12,7 @@ bufferline = "always"
 rulers = [80]
 popup-border = "popup"
 insert-final-newline = false
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 left = ["mode", "diagnostics", "spinner", "separator", "version-control"]
