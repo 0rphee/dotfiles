@@ -13,6 +13,8 @@
 .config/helix/runtime
 .config/kitty/themes/current-theme.conf
 .config/nvm
+.config/zed/*
+!.config/zed/settings.json
 .cache/
 .cargo/
 .conda/
@@ -31,12 +33,14 @@
 .matplotlib/
 .npm/
 # .oh-my-zsh
+.packettracer
 .rustup/
 .ssh/
 .stack/
 .swiftpm/
 .vscode/
 .zsh_sessions/
+Cisco Packet Tracer 8.2.2
 Desktop/
 Documents/
 Downloads/
@@ -61,3 +65,4 @@ go/
 .config/btop
 Library/LaunchAgents/com.koekeishiya.skhd.plist
 Library/LaunchAgents/com.koekeishiya.yabai.plist
+Library/LaunchAgents/com.valvesoftware.steamclean.plist
