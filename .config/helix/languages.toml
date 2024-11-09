@@ -2,6 +2,9 @@
 "formattingProvider" = "fourmolu"
 "plugin" = { "stan" = { "globalOn" = true }}
 
+[language-server.purescript-language-server.config.purescript]
+"formatter" = "purs-tidy"
+
 [language-server.my-omnisharp]
 command = "dotnet"
 args = ["/Users/roger/.dotnet/omnisharp-osx-arm64-net6.0/OmniSharp.dll", "--languageserver" ]
