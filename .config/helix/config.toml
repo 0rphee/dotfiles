@@ -62,6 +62,7 @@ c = ":buffer-close"
 C = ":buffer-close!"
 [keys.normal.space.space]
 "r" = ":lsp-restart"
+"s" = ":lsp-stop"
 "f" = [":pipe find $(pwd) -maxdepth 1 | tail -n +2", "toggle_comments"]
 # relative path (takes cwd of helix, but when using <g-f> to open file, takes cwd as the current opened file directory)
 # ls -1 $(pwd)
