@@ -30,6 +30,7 @@
 # .local/
 .local/bin
 .local/share/delta
+.local/share/purescript
 .local/state/cabal/store/ghc-9.6.5
 .local/state/gh
 .matplotlib/
@@ -68,3 +69,4 @@ go/
 Library/LaunchAgents/com.koekeishiya.skhd.plist
 Library/LaunchAgents/com.koekeishiya.yabai.plist
 Library/LaunchAgents/com.valvesoftware.steamclean.plist
+.Trash
