@@ -30,7 +30,26 @@
             pkgs.nil
             pkgs.nixfmt-rfc-style
 
+            pkgs.kitty
             pkgs.git
+            pkgs.bat
+            pkgs.btop
+            pkgs.delta
+            pkgs.lazydocker
+            pkgs.lazygit
+            pkgs.ripgrep
+            pkgs.starship
+            pkgs.tree
+            pkgs.tinymist # typst lsp
+            pkgs.typst
+            pkgs.yaml-language-server
+            pkgs.zoxide
+
+            # see service note below
+            pkgs.yabai
+            pkgs.skhd
+
+            pkgs.python312Full
 
             inputs.helix-master.packages.${nixpkgs.hostPlatform}.default
           ];
@@ -66,6 +85,24 @@
           nixpkgs.hostPlatform = "aarch64-darwin";
 
           security.pam.enableSudoTouchIdAuth = true;
+
+          # See more: https://daiderd.com/nix-darwin/manual/index.html#opt-services.yabai.enable
+          services.yabai = {
+            enable = false; # service installed manually (yabai --install-service; yabai --start-service), due to differences in the launchd.plist file. GH issue: https://github.com/LnL7/nix-darwin/issues/1226
+            enableScriptingAddition = false;
+            package = pkgs.yabai;
+            config = {
+              # focus_follows_mouse = "autoraise";
+              # ...
+            };
+            extraConfig = "";
+          };
+          environment.extraInit = ''
+            yabai --uninstall-service; yabai --install-service; yabai --start-service
+            skhd --uninstall-service; skhd --install-service; skhd --start-service
+            echo "yay"
+          '';
+
         };
     in
     {

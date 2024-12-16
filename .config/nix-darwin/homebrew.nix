@@ -8,7 +8,10 @@
     enable = true;
 
     onActivation = {
-      cleanup = "zap"; # "zap" removes manually installed brews and casks (and related files) not listed in the generated Brewfile
+      # "zap" removes manually installed brews and casks (and related files) not listed in the generated Brewfile
+      # "none" formulae not present in the generated Brewfile are left installed.
+      # "uninstall" This uninstalls all formulae not listed in generated Brewfile, i.e., brew uninstall is run for those formulae.
+      cleanup = "zap";
       autoUpdate = false; # Fetch the newest stable branch of Homebrew's git repo
       upgrade = false; # Upgrade outdated casks, formulae, and App Store apps
     };
@@ -24,26 +27,8 @@
 
     # `brew install`
     brews = [
-      "bat"
-      "btop"
-      "fd"
-      "fzf"
-      "git-delta"
-      "handbrake"
-      "koekeishiya/formulae/skhd"
-      "koekeishiya/formulae/yabai"
-      "lazydocker"
-      "lazygit"
-      "pkgconf"
-      "python@3.12"
-      "ripgrep"
-      "starship"
-      "tree"
-      "tinymist" # typst lsp
-      "typst"
-      "watch"
-      "yaml-language-server"
-      "zoxide"
+      # "koekeishiya/formulae/skhd"
+      # "koekeishiya/formulae/yabai"
     ];
 
     # `brew install --cask`
@@ -69,7 +54,7 @@
     ];
     taps = [
       "homebrew/bundle"
-      "koekeishiya/formulae"
+      # "koekeishiya/formulae"
     ];
   };
 }
