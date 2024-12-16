@@ -9,6 +9,14 @@
 command = "dotnet"
 args = ["/Users/roger/.dotnet/omnisharp-osx-arm64-net6.0/OmniSharp.dll", "--languageserver" ]
  
+# [language-server.nil.config.nil.formatting]
+# command = ["nixfmt"]
+
+[[language]]
+name = "nix"
+formatter = { command = 'nixfmt' }
+auto-format = false
+
 [[language]]
 name = "haskell"
 auto-format = false

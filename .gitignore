@@ -12,6 +12,7 @@
 .config/ghc/ghci_history
 .config/helix/runtime
 .config/kitty/themes/current-theme.conf
+.config/nix-darwin/result
 .config/nvm
 .config/zed/*
 !.config/zed/settings.json
