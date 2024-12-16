@@ -144,9 +144,9 @@ source $ZSH/oh-my-zsh.sh
 # eval "$(pyenv init -)"
 
 # git access to dotfles
-alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
-alias configlg='/opt/homebrew/bin/lazygit --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
+alias configlg='lazygit --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
 alias lg=lazygit
 
