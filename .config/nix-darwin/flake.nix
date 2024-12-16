@@ -7,8 +7,8 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    nil.url = "github:oxalica/nil";
-    nil.inputs.nixpkgs.follows = "nixpkgs";
+    helix-master.url = "github:helix-editor/helix/master";
+    helix-master.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -25,8 +25,14 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
-            inputs.nil.packages.${nixpkgs.hostPlatform}.nil
+
+            # nix
+            pkgs.nil
             pkgs.nixfmt-rfc-style
+
+            pkgs.git
+
+            inputs.helix-master.packages.${nixpkgs.hostPlatform}.default
           ];
 
           # Necessary for using flakes on this system.
@@ -47,15 +53,29 @@
           # $ darwin-rebuild changelog
           system.stateVersion = 5;
 
+          system.defaults = {
+            dock.autohide = true;
+            dock.mru-spaces = false; # mru-spaces: rearrange spaces on the most recent use
+            finder.AppleShowAllExtensions = true;
+            finder.FXPreferredViewStyle = "clmv"; # column view in finder
+            loginwindow.LoginwindowText = "waaaa";
+            screencapture.location = "~/Desktop";
+          };
+
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
+
+          security.pam.enableSudoTouchIdAuth = true;
         };
     in
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#mbair
       darwinConfigurations."mbair" = nix-darwin.lib.darwinSystem {
-        modules = [ configuration ];
+        modules = [
+          configuration
+          ./homebrew.nix
+        ];
       };
     };
 }
