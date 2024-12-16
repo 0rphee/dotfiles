@@ -128,22 +128,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
 ############# MY PREVIOUS CONFIG ############# without conda
 # check ~/.zprofile, ~/.zshenv, and /etc/paths.d/ for directories added to $PATH
 # order of sourcing: https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
 # .zshenv -> .zprofile -> .zshrc -> .zlogin -> .zlogout
 
-LFCD="$HOME/.config/lf/lfcd.sh"                                #  pre-built binary, make sure to use absolute path
-
 # needed for compiling with ghc (theres no ghc backend for ARM code-gen, the compiler uses llvm (well, supposedly there's native code-gen since 9.2.1)
 # export PATH="/opt/homebrew/opt/llvm@12/bin:$PATH"
 # export LDFLAGS="-L/opt/homebrew/opt/llvm@12/lib"
 # export CPPFLAGS="-I/opt/homebrew/opt/llvm@12/include"
-
-# alias for opening all helix config files for helix
-alias cfh="hx ~/.config/helix/config.toml ~/.config/helix/languages.toml ~/.config/helix/themes/my-gruvbox.toml ~/.config/helix/themes/my-gruvbox-light.toml ~/.config/helix/themes/my-noctis.toml"
 
 # config for pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -156,14 +149,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 alias configlg='/opt/homebrew/bin/lazygit --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
 alias lg=lazygit
-
-LFCD="$HOME/.config/lf/lfcd.sh"                                #  pre-built binary, make sure to use absolute path
-if [ -f "$LFCD" ]; then
-    source "$LFCD"
-fi
-
-# helix project picker
-alias fhx=". $XDG_CONFIG_HOME/helix/hxscript.zsh"
 
 # echo "Mamma Mia!" | figlet -f "alligator" | lolcat
 # echo "Mamma Mia!" | figlet -f "slant" | lolcat
@@ -178,7 +163,6 @@ alias fhx=". $XDG_CONFIG_HOME/helix/hxscript.zsh"
 # sudo make install
 # export LD_LIBRARY_PATH="$HOME/opt/ncurses/lib:$LD_LIBRARY_PATH"
 
-eval "$(zoxide init zsh --cmd j)"
 eval "$(zoxide init zsh --cmd cd)"
 
 # prompt

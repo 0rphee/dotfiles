@@ -14,9 +14,9 @@ export PATH="$HOME/.local/bin:$PATH"
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # go installations
-export PATH=$PATH:$HOME/go/bin
+export PATH=$HOME/go/bin:$PATH:
 export GOPATH=$HOME/go;
-export PATH=$PATH:$GOPATH/bin;
+export PATH=$GOPATH/bin:$PATH;
 
 # homebrew installation, check .zprofile to see why it's here
 eval "$(/opt/homebrew/bin/brew shellenv)"
