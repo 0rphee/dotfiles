@@ -14,6 +14,7 @@
 .config/kitty/themes/current-theme.conf
 .config/nix-darwin/result
 .config/nvm
+.config/spaceship.zsh.zwc
 .config/zed/*
 !.config/zed/settings.json
 .cache/
@@ -34,7 +35,11 @@
 .local/share/purescript
 .local/state/cabal/store/ghc-9.6.5
 .local/state/gh
+.local/state/home-manager/gcroots
+.local/state/nix/profiles
 .matplotlib/
+.nix-defexpr
+.nix-profile
 .npm/
 # .oh-my-zsh
 .packettracer
@@ -44,6 +49,8 @@
 .swiftpm/
 .vscode/
 .zsh_sessions/
+.zcompdump
+Applications/Home Manager Apps
 Cisco Packet Tracer 8.2.2
 Desktop/
 Documents/

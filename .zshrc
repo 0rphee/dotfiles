@@ -1,6 +1,3 @@
-# brew completions
-# FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -14,6 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # ZSH_THEME="daivasmara"
 # ZSH_THEME="my-dash-passion"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -26,11 +24,11 @@ ZSH_THEME_RANDOM_CANDIDATES=(
   "clean"
   "dallas"
   "dieter"
-  "dst"              	#topp
+  "dst"
   "jonathan"
   "jtriley"
   "philips"
-  "passion" 		      #topp
+  "passion"
   "my-dash-passion"
   "headline"		#topp
   "oh-my-via/via"	#topp
@@ -91,16 +89,17 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   stack
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-vi-mode # https://github.com/jeffreytse/zsh-vi-mode
+  nix-shell
 )
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#849289" #,bg=cyan,bold,underline"
 
-source $ZSH/oh-my-zsh.sh
+# NOW MANAGED IN nix-darwin
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -138,11 +137,6 @@ source $ZSH/oh-my-zsh.sh
 # export LDFLAGS="-L/opt/homebrew/opt/llvm@12/lib"
 # export CPPFLAGS="-I/opt/homebrew/opt/llvm@12/include"
 
-# config for pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-
 # git access to dotfles
 alias config='git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
@@ -151,9 +145,9 @@ alias configlg='lazygit --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 alias lg=lazygit
 
 # echo "Mamma Mia!" | figlet -f "alligator" | lolcat
-# echo "Mamma Mia!" | figlet -f "slant" | lolcat
-# echo "Mamma Mia!" | figlet -f "3D-ASCII" | lolcat
-# echo "Mamma Mia!" | figlet -f "ANSI Shadow" | lolcat
+# "slant"
+# "3D-ASCII"
+# "ANSI Shadow"
 
 # ncurses https://stackoverflow.com/questions/63730439/lib64-libtinfo-so-5-no-version-information-available
 # issue when compiling Haskeline (found to interfere with more programs also) /lib64/libtinfo.so.6: no version information available
@@ -165,8 +159,9 @@ alias lg=lazygit
 
 eval "$(zoxide init zsh --cmd cd)"
 
-# prompt
-eval "$(starship init zsh)"
+# prompt MOVED to nix-darwin flake
+# eval "$(starship init zsh)"
+# source "/nix/store/pad214p2pck4r3bm3qd0dc2k67lgva8f-spaceship-prompt-4.17.0/lib/spaceship-prompt/spaceship.zsh"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
