@@ -31,11 +31,11 @@ normal = "block"
 
 [editor.file-picker]
 hidden = false      # enables ignoring hidden files
-git-ignore = true   # don't show up in file picker when hidden=true 
-ignore = true       # don't show up in file picker when hidden=true
+git-ignore = true   # don't show up in files in filepicker (.gitignore file) when hidden=true
+ignore = true       # don't show up in files in filepicker (.ignore file) when hidden=true
 max-depth = 10
-#  in order to ignore specific files/directories in a proyect,
-#  create a .ignore files with paths
+follow-symlinks = true
+deduplicate-links = false
 
 [editor.whitespace]
 render = "all"
