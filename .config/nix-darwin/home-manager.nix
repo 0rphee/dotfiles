@@ -1,15 +1,24 @@
 {
   pkgs,
-  config,
   lib,
+  user,
   ...
 }:
 {
 
   home.stateVersion = "25.05";
-  home.homeDirectory = "/Users/roger";
+  home.homeDirectory = "/Users/${user}";
 
   home.packages = [
+    pkgs.kitty
+
+    pkgs.tinymist # typst lsp
+    pkgs.typst
+    pkgs.yaml-language-server
+
+    # see service note in configuration.nix
+    pkgs.yabai
+    pkgs.skhd
   ];
 
   home.activation = {

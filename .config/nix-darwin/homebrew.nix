@@ -27,8 +27,6 @@
 
     # `brew install`
     brews = [
-      # "koekeishiya/formulae/skhd"
-      # "koekeishiya/formulae/yabai"
     ];
 
     # `brew install --cask`
@@ -54,7 +52,6 @@
     ];
     taps = [
       "homebrew/bundle"
-      # "koekeishiya/formulae"
     ];
   };
 }
