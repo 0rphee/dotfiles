@@ -4,7 +4,7 @@
   user,
   ...
 }:
-{
+rec {
 
   home.stateVersion = "25.05";
   home.homeDirectory = "/Users/${user}";
@@ -38,6 +38,24 @@
       run $SKHD_BIN --start-service
       echo "skhd service reinstalled and restarted"
     '';
+
+  };
+
+  launchd.agents = {
+    "ke.bou.dark-mode-notify" = {
+      enable = true;
+      config = {
+        Label = "ke.bou.dark-mode-notify";
+        KeepAlive = true;
+        StandardErrorPath = "/tmp/dark-mode-notify_${user}.err.log";
+        StandardOutPath = "/tmp/dark-mode-notify_${user}.out.log";
+        ProgramArguments = [
+          "${pkgs.dark-mode-notify}/bin/dark-mode-notify"
+          "${pkgs.zsh}/bin/zsh"
+          "${home.homeDirectory}/.config/dark-mode-notify/change-background.sh"
+        ];
+      };
+    };
   };
 
   home.file = {

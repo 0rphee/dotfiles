@@ -1,5 +1,3 @@
-#!/bin/sh
-
 export PATH="/opt/homebrew/bin/:/usr/local/bin:$PATH"
 
 # Check the system settings to obtain the theme mode
@@ -33,9 +31,9 @@ ln -sf "$HOME/.config/kitty/themes/${chosen_theme}.conf" "$HOME/.config/kitty/th
 pkill -USR1 kitty &
 
 # kakoune
-ln -sf "$HOME/.config/kak/colors/${chosen_theme}-medium.kak" "$HOME/.config/kak/colors/current-theme.kak"
+# ln -sf "$HOME/.config/kak/colors/${chosen_theme}-medium.kak" "$HOME/.config/kak/colors/current-theme.kak"
 
-kak -l | while IFS= read -r val; do
-    echo "colorscheme ${chosen_theme}-medium" | kak -p $val &
-done
+# kak -l | while IFS= read -r val; do
+#     echo "colorscheme ${chosen_theme}-medium" | kak -p $val &
+# done
 

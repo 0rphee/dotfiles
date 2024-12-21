@@ -74,6 +74,7 @@ go/
 .zsh_history
 .config/lazygit/state.yml
 .config/btop
+Library/LaunchAgents/ke.bou.dark-mode-notify.plist
 Library/LaunchAgents/com.koekeishiya.skhd.plist
 Library/LaunchAgents/com.koekeishiya.yabai.plist
 Library/LaunchAgents/com.valvesoftware.steamclean.plist

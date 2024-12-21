@@ -1,9 +1,6 @@
 [submodule ".config/helix/themes"]
 	path = .config/helix/themes
 	url = https://github.com/0rphee/my-helix-themes.git
-[submodule ".config/dark-mode-notify/dark-mode-notify-repo"]
-	path = .config/dark-mode-notify/dark-mode-notify-repo
-	url = git@github.com:bouk/dark-mode-notify.git
 [submodule ".config/kak"]
 	path = .config/kak
 	url = git@github.com:0rphee/kak-config.git
