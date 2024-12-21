@@ -6,7 +6,7 @@
   user,
   ...
 }:
-{
+rec {
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
   nix.settings.substituters = [
@@ -37,12 +37,32 @@
   system.stateVersion = 5;
 
   system.defaults = {
-    dock.autohide = true;
-    dock.mru-spaces = false; # mru-spaces: rearrange spaces on the most recent use
-    finder.AppleShowAllExtensions = true;
-    finder.FXPreferredViewStyle = "clmv"; # column view in finder
+    # see more
+    # https://github.com/yannbertrand/macos-defaults
+    # https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/rich-demo/modules/system.nix
+
+    dock = {
+      autohide = true;
+      mru-spaces = false; # mru-spaces: rearrange spaces on the most recent use
+      orientation = "left";
+      wvous-tr-corner = 10; # 10: Put Display to Sleep
+      wvous-br-corner = 4; # 4: Desktop
+    };
+
+    finder = {
+      AppleShowAllExtensions = true;
+      AppleShowAllFiles = true;
+      FXPreferredViewStyle = "clmv"; # column view in finder
+      ShowPathbar = true;
+      _FXShowPosixPathInTitle = true;
+    };
+
+    screencapture = {
+      location = "~/Desktop";
+      disable-shadow = true;
+    };
+
     loginwindow.LoginwindowText = "waaaa";
-    screencapture.location = "~/Desktop";
   };
 
   security.pam.enableSudoTouchIdAuth = true;
