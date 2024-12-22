@@ -162,7 +162,3 @@ eval "$(zoxide init zsh --cmd cd)"
 # prompt MOVED to nix-darwin flake
 # eval "$(starship init zsh)"
 # source "/nix/store/pad214p2pck4r3bm3qd0dc2k67lgva8f-spaceship-prompt-4.17.0/lib/spaceship-prompt/spaceship.zsh"
-
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

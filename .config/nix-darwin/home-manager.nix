@@ -15,7 +15,12 @@ rec {
     pkgs.tinymist # typst lsp
     pkgs.typst
     pkgs.yaml-language-server
-
+    pkgs.pyright # pyright & pyright-lang-server - NOTE: check basedpyright
+    pkgs.nodePackages.prettier
+    pkgs.vscode-langservers-extracted # vscode-css-language-server vscode-eslint-language-server vscode-html-language-server vscode-json-language-server vscode-markdown-language-server
+    pkgs.docker-compose-language-service # docker-compose-langserver
+    pkgs.dockerfile-language-server-nodejs # docker-langserver
+    pkgs.typescript-language-server
     # see service note in configuration.nix
     pkgs.yabai
     pkgs.skhd
