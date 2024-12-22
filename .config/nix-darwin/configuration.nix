@@ -6,7 +6,7 @@
   user,
   ...
 }:
-rec {
+{
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
   nix.settings.substituters = [
@@ -70,22 +70,17 @@ rec {
   environment.variables = rec {
     EDITOR = "${inputs.helix-master.packages.${hostPlatform}.default}/bin/hx";
     VISUAL = EDITOR;
+    GREP_COLOR = "auto";
   };
 
-  environment.extraInit = ''
-    # if a path is not a command, cd into it
-    setopt auto_cd
-    alias -g ...='../..'
-    alias -g ....='../../..'
-    alias -g .....='../../../..'
-    alias -g ......='../../../../..'
-  '';
+  environment.extraInit = '''';
   environment.shellAliases = {
-    ls = "ls -G";
-    lsa = "ls -Glah";
-    l = "ls -Glah";
-    ll = "ls -Glh";
-    la = "ls -GlAh";
+    # not loaded in nix develop
+    # ls = "ls -G";
+    # lsa = "ls -Glah";
+    # l = "ls -Glah";
+    # ll = "ls -Glh";
+    # la = "ls -GlAh";
   };
 
   # List packages installed in system profile. To search by name, run:
@@ -123,6 +118,19 @@ rec {
       source "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
       source "${pkgs.zsh-nix-shell}/share/zsh-nix-shell/nix-shell.plugin.zsh"
       source "${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh"
+
+      # if a path is not a command, cd into it
+      setopt auto_cd
+      alias -g ...='../..'
+      alias -g ....='../../..'
+      alias -g .....='../../../..'
+      alias -g ......='../../../../..'
+
+      alias ls="ls -G";
+      alias lsa="ls -Glah";
+      alias l="ls -Glah";
+      alias ll="ls -Glh";
+      alias la="ls -GlAh";
     '';
     loginShellInit = '''';
     promptInit = ''
