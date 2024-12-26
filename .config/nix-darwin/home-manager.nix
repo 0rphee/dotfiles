@@ -2,6 +2,7 @@
   pkgs,
   lib,
   user,
+  btop-main,
   ...
 }:
 rec {
@@ -64,6 +65,9 @@ rec {
   };
 
   home.file = {
+    ".config/btop/themes".source =
+      "${btop-main}/themes";
+
     # ".config/nix-darwin/test-sym.nix".source =
     #   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix-darwin/home-manager.nix";
   };

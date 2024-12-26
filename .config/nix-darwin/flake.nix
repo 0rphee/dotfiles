@@ -12,6 +12,9 @@
 
     helix-master.url = "github:helix-editor/helix/master";
     helix-master.inputs.nixpkgs.follows = "nixpkgs";
+
+    btop-main.url = "github:aristocratos/btop";
+    btop-main.flake = false;
   };
 
   outputs =
@@ -20,6 +23,7 @@
       nix-darwin,
       nixpkgs,
       home-manager,
+      btop-main,
       ...
     }:
     let
@@ -40,6 +44,7 @@
               self
               user
               hostPlatform
+              btop-main
               ;
           };
         in

@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "btop-main": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734178524,
+        "narHash": "sha256-dECDK21JZCvUDaXYMFNpyg/o6Yn8Qf4eC0KPDvWeYak=",
+        "owner": "aristocratos",
+        "repo": "btop",
+        "rev": "5535f50e2023f032309333ae6bade3a9824d2f56",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aristocratos",
+        "repo": "btop",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1727974419,
@@ -43,11 +59,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1734120292,
-        "narHash": "sha256-L6f2Biwy5To1Nv6K+aw+zZo+UKPAFEGLzRy9n4BrdZQ=",
+        "lastModified": 1735147613,
+        "narHash": "sha256-/hPnbJA2KY088J7N7EX7m8OywIGla1CHX4e0ysDH9kA=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "e14c346ee74a44051b2c07c2255a6ab80142dbe7",
+        "rev": "7b9b9329b9d9567f0c5cfded453b4e8445525774",
         "type": "github"
       },
       "original": {
@@ -115,6 +131,7 @@
     },
     "root": {
       "inputs": {
+        "btop-main": "btop-main",
         "helix-master": "helix-master",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",

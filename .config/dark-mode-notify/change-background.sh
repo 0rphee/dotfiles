@@ -11,12 +11,14 @@ case $mode in
   dark)
 
     # chosen_theme="gruvbox-dark"
+    previous_theme="everforest-light"
     chosen_theme="everforest-dark"
 
     ;;
   light)
 
     # chosen_theme="gruvbox-light"
+    previous_theme="everforest-dark"
     chosen_theme="everforest-light"
 
     ;;
@@ -29,6 +31,10 @@ pkill -USR1 hx &
 # kitty
 ln -sf "$HOME/.config/kitty/themes/${chosen_theme}.conf" "$HOME/.config/kitty/themes/current-theme.conf"
 pkill -USR1 kitty &
+
+# btop
+sed -i '' "s|${previous_theme}-medium|${chosen_theme}-medium|g" "$HOME/.config/btop/btop.conf"
+pkill -USR2 btop
 
 # kakoune
 # ln -sf "$HOME/.config/kak/colors/${chosen_theme}-medium.kak" "$HOME/.config/kak/colors/current-theme.kak"
