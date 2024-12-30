@@ -72,3 +72,4 @@ SPACESHIP_HOST_SHOW="always"
 
 # Do not truncate path in repos
 SPACESHIP_DIR_TRUNC_REPO=false
+SPACESHIP_DIR_TRUNC=0
