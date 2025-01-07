@@ -63,6 +63,17 @@
     };
 
     loginwindow.LoginwindowText = "waaaa";
+
+    CustomUserPreferences = {
+      "wang.jianing.app.OpenInEditor-Lite" = {
+        LiteDefaultEditor = "neovim";
+        NeovimCommand = "open -na kitty --args --single-instance /run/current-system/sw/bin/hx PATH";
+      };
+      "wang.jianing.app.OpenInTerminal-Lite" = {
+        LiteDefaultTerminal = "kitty";
+        KittyCommand = "open -na kitty --args --single-instance --directory";
+      };
+    };
   };
 
   security.pam.enableSudoTouchIdAuth = true;

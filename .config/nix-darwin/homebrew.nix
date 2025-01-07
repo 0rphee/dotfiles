@@ -11,7 +11,7 @@
       # "zap" removes manually installed brews and casks (and related files) not listed in the generated Brewfile
       # "none" formulae not present in the generated Brewfile are left installed.
       # "uninstall" This uninstalls all formulae not listed in generated Brewfile, i.e., brew uninstall is run for those formulae.
-      cleanup = "zap";
+      cleanup = "none";
       autoUpdate = false; # Fetch the newest stable branch of Homebrew's git repo
       upgrade = false; # Upgrade outdated casks, formulae, and App Store apps
     };
@@ -39,10 +39,12 @@
       "raycast"
       "zoom"
       "openinterminal-lite"
+      "openineditor-lite"
       "launchcontrol"
       "chromium"
       "obsidian"
       "steam"
+      "altserver"
       # "bitwarden" installed via app store
 
       "font-comic-mono"

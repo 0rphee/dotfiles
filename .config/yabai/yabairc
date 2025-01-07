@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/run/current-system/sw/bin/zsh
 
 set -x
 
