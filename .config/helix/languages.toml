@@ -18,6 +18,11 @@ formatter = { command = 'nixfmt' }
 auto-format = false
 
 [[language]]
+name = "typst"
+formatter = { command = 'typstyle' }
+auto-format = false
+
+[[language]]
 name = "haskell"
 auto-format = false
 language-servers = [ "haskell-language-server" ]

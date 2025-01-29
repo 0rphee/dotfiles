@@ -1,7 +1,7 @@
 theme = "current-theme"
 
 [editor]
-line-number = "relative"
+line-number = "absolute"
 idle-timeout = 100
 completion-trigger-len = 2
 scrolloff = 5  # default 5
@@ -12,7 +12,7 @@ bufferline = "always"
 rulers = [80]
 popup-border = "popup"
 insert-final-newline = false
-end-of-line-diagnostics = "hint"
+# end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 left = ["mode", "diagnostics", "spinner", "separator", "version-control"]
