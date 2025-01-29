@@ -15,6 +15,8 @@ rec {
 
     pkgs.tinymist # typst lsp
     pkgs.typst
+    pkgs.typstyle
+
     pkgs.yaml-language-server
     pkgs.pyright # pyright & pyright-lang-server - NOTE: check basedpyright
     pkgs.nodePackages.prettier
@@ -65,8 +67,7 @@ rec {
   };
 
   home.file = {
-    ".config/btop/themes".source =
-      "${btop-main}/themes";
+    ".config/btop/themes".source = "${btop-main}/themes";
 
     # ".config/nix-darwin/test-sym.nix".source =
     #   config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nix-darwin/home-manager.nix";
