@@ -10,10 +10,13 @@
 
 .config/gh
 .config/ghc/ghci_history
+.config/gtk-2.0
 .config/helix/runtime
+.config/jgit
 .config/kitty/themes/current-theme.conf
 .config/nix-darwin/result
 .config/nvm
+.config/StardewValley
 .config/spaceship.zsh.zwc
 .config/zed/*
 !.config/zed/settings.json
@@ -21,10 +24,12 @@
 .cargo/
 .conda/
 .cups/
+.dart-tool
 .docker/
 .elm/
 .ghcup/
 .ghc/
+.ghc-wasm/.cabal
 .gnupg
 .gnupg_pre_2.1
 .ipython/
@@ -33,16 +38,18 @@
 .local/bin
 .local/share/delta
 .local/share/purescript
-.local/state/cabal/store/ghc-9.6.5
+.local/state/cabal/store
 .local/state/gh
 .local/state/home-manager/gcroots
 .local/state/nix/profiles
 .matplotlib/
+.m2/repository
 .nix-defexpr
 .nix-profile
 .npm/
 # .oh-my-zsh
 .packettracer
+.pub-cache
 .rustup/
 .ssh/
 .stack/
