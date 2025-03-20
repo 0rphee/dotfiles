@@ -27,6 +27,9 @@ rec {
     # see service note in configuration.nix
     pkgs.yabai
     pkgs.skhd
+
+    pkgs.jdk
+    pkgs.maven
   ];
 
   home.activation = {
