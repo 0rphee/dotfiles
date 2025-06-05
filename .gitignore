@@ -18,6 +18,7 @@
 .config/nvm
 .config/StardewValley
 .config/spaceship.zsh.zwc
+.config/swiftpm
 .config/zed/*
 !.config/zed/settings.json
 .cache/
