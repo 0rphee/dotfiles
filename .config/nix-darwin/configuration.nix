@@ -76,7 +76,7 @@
     };
   };
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   environment.variables = rec {
     EDITOR = "${inputs.helix-master.packages.${hostPlatform}.default}/bin/hx";
