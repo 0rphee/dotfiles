@@ -63,44 +63,8 @@ C = ":buffer-close!"
 [keys.normal.space.space]
 "r" = ":lsp-restart"
 "s" = ":lsp-stop"
-"f" = [":pipe find $(pwd) -maxdepth 1 | tail -n +2", "toggle_comments"]
 # relative path (takes cwd of helix, but when using <g-f> to open file, takes cwd as the current opened file directory)
 # ls -1 $(pwd)
-
-[keys.normal."+"]
-m = ":sh pwd >> $XDG_CONFIG_HOME/helix/projects"
-
-[keys.normal."+"."s"]
-# using zellij
-# b = ":run-shell-command zellij run --floating --name \"stack build\" -- zsh -c \"stack build && echo Build successful!\""
-# r = ":run-shell-command zellij run --floating --name \"stack run\" -- zsh -c \"stack run\""
-
-# using kitty
-b = ":run-shell-command kitty @ launch --title \"stack build\" --type window --cwd current --copy-env --hold zsh -c \"stack build && echo Build successful!\""
-r = ":run-shell-command kitty @ launch --title \"stack run\" --type window --cwd current --copy-env --hold zsh -c \"stack run\""
-t = ":run-shell-command kitty @ launch --title \"stack test\" --type window --cwd current --copy-env --hold zsh -c \"stack test\""
-p = ":run-shell-command kitty @ launch --title \"stack bench\" --type window --cwd current --copy-env --hold zsh -c \"stack bench\""
-
-# using wezterm
-# b = ":run-shell-command wezterm cli split-pane -- zsh -c \"stack build && echo Build successful!; read -s -r -k1\""
-# r = ":run-shell-command wezterm cli split-pane -- zsh -c \"stack run; read -s -r -k1\""
-
-[keys.normal."+"."c"]
-# using zellij
-# b = ":run-shell-command zellij run --floating --name \"g++ main.cpp --std=c++20\" -- zsh -c \"g++ main.cpp --std=c++20 && echo Build successful!\""
-# r = ":run-shell-command zellij run --floating --name \"g++ main.cpp --std=c++20 && ./a.out\" -- zsh -c \"g++ main.cpp --std=c++20 && ./a.out\""
-
-# using kitty
-# b = ":run-shell-command kitty @ launch --title \"g++ main.cpp --std=c++20\" --type window --cwd current --copy-env --hold zsh -c \"g++ main.cpp --std=c++20 && echo Build successful!\""
-# r = ":run-shell-command kitty @ launch --title \"g++ main.cpp --std=c++20 && ./a.out\" --type window --cwd current --copy-env --hold zsh -c \"g++ main.cpp --std=c++20 && ./a.out\""
-
-b = ":run-shell-command kitty @ launch --title \"make\" --type window --cwd current --copy-env --hold zsh -c \"make && echo Build successful!\""
-r = ":run-shell-command kitty @ launch --title \"make run\" --type window --cwd current --copy-env --hold zsh -c \"make run\""
-
-
-
-# b = ":run-shell-command wezterm cli split-pane -- zsh -c \"g++ main.cpp --std=c++20 && echo Build successful!; read -s -r -k1\""
-# r = ":run-shell-command wezterm cli split-pane -- zsh -c \"g++ main.cpp --std=c++20 && ./a.out;read -s -r -k1\""
-
-[keys.normal."+"."p"]
-r = ":run-shell-command kitty @ launch --title \"python3\" --type window --cwd current --copy-env --hold zsh -c \"python3 main.py && echo Successful run!\""
+"f" = [":pipe find $(pwd) -maxdepth 1 | tail -n +2", "toggle_comments"]
+B = ":sh bash /Users/roger/.config/helix/hx-git-blame.sh %{buffer_name} %{cursor_line}" # Show blame information
+U = ":sh bash /Users/roger/.config/helix/hx-git-blame.sh --url-only %{cursor_line} %{buffer_name} | xargs -I{} open {}" # Open PR or commit url in browser# relative path (takes cwd of helix, but when using <g-f> to open file, takes cwd as the current opened file directory)
