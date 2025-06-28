@@ -25,6 +25,7 @@
 .cargo/
 .conda/
 .cups/
+.dart
 .dart-tool
 .docker/
 .elm/
@@ -33,6 +34,7 @@
 .ghc-wasm/.cabal
 .gnupg
 .gnupg_pre_2.1
+.hex
 .ipython/
 .keras/
 # .local/
@@ -43,11 +45,16 @@
 .local/state/gh
 .local/state/home-manager/gcroots
 .local/state/nix/profiles
+.local/share/nix/repl-history
+.local/share/StardewValley/DisconnectLogs
 .matplotlib/
+.mix
+.mongodb/compass
 .m2/repository
 .nix-defexpr
 .nix-profile
 .npm/
+.openjfx/
 # .oh-my-zsh
 .packettracer
 .pub-cache
