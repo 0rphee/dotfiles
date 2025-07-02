@@ -12,7 +12,7 @@ bufferline = "always"
 rulers = [80]
 popup-border = "popup"
 insert-final-newline = false
-# end-of-line-diagnostics = "hint"
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 left = ["mode", "diagnostics", "spinner", "separator", "version-control"]
@@ -21,7 +21,7 @@ right = ["selections", "position", "position-percentage", "file-encoding", "file
 
 [editor.lsp]
 display-messages = true
-display-inlay-hints = true
+display-inlay-hints = false
 goto-reference-include-declaration = false
 
 [editor.cursor-shape]
@@ -46,6 +46,10 @@ render = true
 
 [editor.soft-wrap]
 enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint" # error, warning, info, hint
+other-lines = "disable"
 
 [keys.normal]
 ";" = "remove_primary_selection"
