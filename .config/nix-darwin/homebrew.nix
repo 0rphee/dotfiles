@@ -31,7 +31,7 @@
 
     # `brew install --cask`
     casks = [
-      "utm"
+      # "utm"
       "docker" # docker desktop
       "firefox"
       "handbrake"
