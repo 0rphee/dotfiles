@@ -10,3 +10,5 @@
           # /Users/roger/.ghcup/bin:
           # /opt/homebrew/opt/llvm@12/bin:
 # export PATH
+
+export PATH="$HOME/.elan/bin:$PATH"

@@ -28,6 +28,7 @@
 .dart
 .dart-tool
 .docker/
+.elan
 .elm/
 .ghcup/
 .ghc/
