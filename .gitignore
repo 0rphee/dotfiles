@@ -16,6 +16,7 @@
 .config/kitty/themes/current-theme.conf
 .config/nix-darwin/result
 .config/nvm
+.config/raycast/extensions
 .config/StardewValley
 .config/spaceship.zsh.zwc
 .config/swiftpm
@@ -48,6 +49,7 @@
 .local/state/nix/profiles
 .local/share/nix/repl-history
 .local/share/StardewValley/DisconnectLogs
+.local/state/.keep
 .matplotlib/
 .mix
 .mongodb/compass
