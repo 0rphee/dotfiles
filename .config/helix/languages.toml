@@ -5,10 +5,10 @@
 [language-server.purescript-language-server.config.purescript]
 "formatter" = "purs-tidy"
 
-[language-server.my-omnisharp]
-command = "dotnet"
-args = ["/Users/roger/.dotnet/omnisharp-osx-arm64-net6.0/OmniSharp.dll", "--languageserver" ]
- 
+[language-server.lean]
+command = "lake"
+args = [ "serve" ]
+
 # [language-server.nil.config.nil.formatting]
 # command = ["nixfmt"]
 
