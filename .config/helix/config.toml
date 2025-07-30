@@ -13,6 +13,7 @@ rulers = [80]
 popup-border = "popup"
 insert-final-newline = false
 end-of-line-diagnostics = "hint"
+rainbow-brackets = true
 
 [editor.statusline]
 left = ["mode", "diagnostics", "spinner", "separator", "version-control"]
