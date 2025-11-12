@@ -89,6 +89,13 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  networking = rec {
+    # sudo scutil --set
+    computerName = "mbair"; # ComputerName
+    hostName = computerName; # HostName
+    localHostName = computerName; # LocalHostName
+  };
+
   environment.variables = rec {
     EDITOR = "${inputs.helix-master.packages.${hostPlatform}.default}/bin/hx";
     VISUAL = EDITOR;
@@ -119,7 +126,6 @@
     pkgs.lazydocker
     pkgs.lazygit
     pkgs.ripgrep
-    pkgs.starship
     pkgs.tree
 
     pkgs.zsh
@@ -129,7 +135,7 @@
     pkgs.zsh-vi-mode
     pkgs.zsh-nix-shell
 
-    pkgs.python312Full
+    pkgs.python314
 
     inputs.helix-master.packages.${hostPlatform}.default
   ];
@@ -153,6 +159,7 @@
       alias l="ls -Glah";
       alias ll="ls -Glh";
       alias la="ls -GlAh";
+      alias kssh="kitten ssh";
     '';
     loginShellInit = '''';
     promptInit = ''

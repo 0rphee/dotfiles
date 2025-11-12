@@ -32,9 +32,9 @@
     # `brew install --cask`
     casks = [
       # "utm"
-      "docker" # docker desktop
+      "docker-desktop"
       "firefox"
-      "handbrake"
+      "handbrake-app"
       "steam"
       "raycast"
       "zoom"
