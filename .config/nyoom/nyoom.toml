@@ -1,6 +1,5 @@
 profile = "/Users/roger/Library/Application Support/Firefox/Profiles/fa822kxt.def-my-conf"
 
 [[userchromes]]
-name = "mimipile"
-source = "github:mimipile/firefoxCSS"
-configs = []
+name = "0rphee"
+source = "github:0rphee/firefoxCSS"
