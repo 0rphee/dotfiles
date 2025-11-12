@@ -65,11 +65,14 @@ q = ":quit"
 Q = ":quit!"
 c = ":buffer-close"
 C = ":buffer-close!"
+
 [keys.normal.space.space]
-"r" = ":lsp-restart"
-"s" = ":lsp-stop"
+d = ":reset-diff-change"
+t = ':lsp-workspace-command tinymist.pinMain "%sh{realpath %{buffer_name}}"'
+r = ":lsp-restart"
+s = ":lsp-stop"
 # relative path (takes cwd of helix, but when using <g-f> to open file, takes cwd as the current opened file directory)
 # ls -1 $(pwd)
-"f" = [":pipe find $(pwd) -maxdepth 1 | tail -n +2", "toggle_comments"]
+f = [":pipe find $(pwd) -maxdepth 1 | tail -n +2", "toggle_comments"]
 B = ":sh bash /Users/roger/.config/helix/hx-git-blame.sh %{buffer_name} %{cursor_line}" # Show blame information
 U = ":sh bash /Users/roger/.config/helix/hx-git-blame.sh --url-only %{cursor_line} %{buffer_name} | xargs -I{} open {}" # Open PR or commit url in browser# relative path (takes cwd of helix, but when using <g-f> to open file, takes cwd as the current opened file directory)
