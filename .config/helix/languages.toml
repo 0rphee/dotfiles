@@ -30,6 +30,7 @@ auto-format = false
 name = "haskell"
 auto-format = false
 language-servers = [ "haskell-language-server" ]
+# language-servers = [ "hacked-hls" ]
 
 [[language]]
 name = "c-sharp"
@@ -46,8 +47,12 @@ indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "python"
-indent = { tab-width = 4, unit = "    " }
-auto-format = true
+auto-format = false
+language-servers = [ "basedpyright" ]
+
+[[language]]
+name = "css"
+auto-format = false
 
 [[language]]
 name = "html"

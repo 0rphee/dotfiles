@@ -17,7 +17,7 @@ rec {
     pkgs.typstyle
 
     pkgs.yaml-language-server
-    pkgs.pyright # pyright & pyright-lang-server - NOTE: check basedpyright
+    pkgs.basedpyright
     pkgs.nodePackages.prettier
     pkgs.vscode-langservers-extracted # vscode-css-language-server vscode-eslint-language-server vscode-html-language-server vscode-json-language-server vscode-markdown-language-server
     pkgs.docker-compose-language-service # docker-compose-langserver
