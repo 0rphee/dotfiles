@@ -12,6 +12,9 @@
 
     helix-master.url = "github:helix-editor/helix/master";
     helix-master.inputs.nixpkgs.follows = "nixpkgs";
+
+    zsh-helix-mode.url = "github:multirious/zsh-helix-mode/main";
+    zsh-helix-mode.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -47,6 +50,17 @@
           system = systemName;
           inherit specialArgs;
           modules = [
+            (
+              { config, pkgs, ... }:
+              {
+                nixpkgs.overlays = [
+                  (final: prev: {
+                    zsh-helix-mode = inputs.zsh-helix-mode.packages.${hostPlatform}.default;
+                  })
+                ];
+              }
+            )
+
             ./configuration.nix
             ./homebrew.nix
 
