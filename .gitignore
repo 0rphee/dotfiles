@@ -45,6 +45,7 @@
 .local/share/purescript
 .local/state/cabal/store
 .local/state/gh
+.local/share/helix/trusted_workspaces
 .local/state/home-manager/gcroots
 .local/state/nix/profiles
 .local/share/nix/repl-history
@@ -93,6 +94,7 @@ go/
 .config/lazygit/state.yml
 .config/btop
 Library/LaunchAgents/ke.bou.dark-mode-notify.plist
+Library/LaunchAgents/com.asmvik.yabai.plist
 Library/LaunchAgents/com.koekeishiya.skhd.plist
 Library/LaunchAgents/com.koekeishiya.yabai.plist
 Library/LaunchAgents/com.valvesoftware.steamclean.plist

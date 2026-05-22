@@ -7,5 +7,5 @@ export PATH="$HOME/.local/bin:$PATH"
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # homebrew installation, check .zprofile to see why it's here
-eval "$(/opt/homebrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# . "$HOME/.cargo/env"
