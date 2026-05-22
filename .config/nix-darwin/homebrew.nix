@@ -44,16 +44,13 @@
       "chromium"
       "obsidian"
       "steam"
-      "altserver"
+      # "altserver"
       # "bitwarden" installed via app store
 
       "font-comic-mono"
       "font-iosevka"
       "font-mononoki"
       "font-symbols-only-nerd-font"
-    ];
-    taps = [
-      "homebrew/bundle"
     ];
   };
 }

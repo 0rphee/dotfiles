@@ -23,14 +23,14 @@
       ...
     }:
     let
-      user = "roger";
+      user = "or";
       darwinSystems = {
-        mbair = "aarch64-darwin";
+        lamak = "aarch64-darwin";
       };
     in
     {
       # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#mbair
+      # $ darwin-rebuild build --flake .#lamak
       darwinConfigurations = nixpkgs.lib.attrsets.mapAttrs (
         systemName: hostPlatform:
         let
