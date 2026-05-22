@@ -18,7 +18,7 @@ rec {
 
     pkgs.yaml-language-server
     pkgs.basedpyright
-    pkgs.nodePackages.prettier
+    pkgs.prettier
     pkgs.vscode-langservers-extracted # vscode-css-language-server vscode-eslint-language-server vscode-html-language-server vscode-json-language-server vscode-markdown-language-server
     pkgs.docker-compose-language-service # docker-compose-langserver
     pkgs.dockerfile-language-server # docker-langserver
@@ -34,23 +34,32 @@ rec {
   home.activation = {
     reloadYabaiService = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       YABAI_BIN=${pkgs.yabai}/bin/yabai
-      echo yabai bin: $YABAI_BIN
-      run $YABAI_BIN --uninstall-service
-      run $YABAI_BIN --install-service
-      run $YABAI_BIN --start-service
+      echo "Managing yabai service..."
+
+      # Uninstall first to prevent the "already installed" abort error
+      if [ -f "$HOME/Library/LaunchAgents/com.asmvik.yabai.plist" ]; then
+        $YABAI_BIN --uninstall-service
+      fi
+
+      $YABAI_BIN --install-service
+      $YABAI_BIN --start-service
       echo "yabai service reinstalled and restarted"
     '';
+
     reloadSkhdService = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       SKHD_BIN=${pkgs.skhd}/bin/skhd
-      echo skhd bin: $SKHD_BIN
-      run $SKHD_BIN --uninstall-service
-      run $SKHD_BIN --install-service
-      run $SKHD_BIN --start-service
+      echo "Managing skhd service..."
+
+      # Uninstall first to prevent the "already installed" abort error
+      if [ -f "$HOME/Library/LaunchAgents/com.koekeishiya.skhd.plist" ]; then
+        $SKHD_BIN --uninstall-service
+      fi
+
+      $SKHD_BIN --install-service
+      $SKHD_BIN --start-service
       echo "skhd service reinstalled and restarted"
     '';
-
   };
-
   launchd.agents = {
     "ke.bou.dark-mode-notify" = {
       enable = true;

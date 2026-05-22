@@ -162,3 +162,15 @@ eval "$(zoxide init zsh --cmd cd)"
 # prompt MOVED to nix-darwin flake
 # eval "$(starship init zsh)"
 # source "/nix/store/pad214p2pck4r3bm3qd0dc2k67lgva8f-spaceship-prompt-4.17.0/lib/spaceship-prompt/spaceship.zsh"
+
+# Added by Antigravity
+export PATH="/Users/roger/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/roger/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/roger/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/roger/.antigravity/antigravity/bin:$PATH"

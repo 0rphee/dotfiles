@@ -10,16 +10,18 @@ fi
 case $mode in
   dark)
 
-    # chosen_theme="gruvbox-dark"
-    previous_theme="everforest-light"
-    chosen_theme="everforest-dark"
+    previous_theme="gruvbox-light"
+    # previous_theme="everforest-light"
+    # chosen_theme="everforest-dark"
+    chosen_theme="gruvbox-dark"
 
     ;;
   light)
 
-    # chosen_theme="gruvbox-light"
-    previous_theme="everforest-dark"
-    chosen_theme="everforest-light"
+    previous_theme="gruvbox-dark"
+    # previous_theme="everforest-dark"
+    # chosen_theme="everforest-light"
+    chosen_theme="gruvbox-light"
 
     ;;
 esac
