@@ -1,3 +1,4 @@
+.antigravity-ide
 .config/btop/btop.log
 .config/cabal
 
@@ -31,6 +32,7 @@
 .docker/
 .elan
 .elm/
+.gemini
 .ghcup/
 .ghc/
 .ghc-wasm/.cabal
@@ -47,6 +49,7 @@
 .local/state/gh
 .local/share/helix/trusted_workspaces
 .local/state/home-manager/gcroots
+.local/share/mise
 .local/state/nix/profiles
 .local/share/nix/repl-history
 .local/share/StardewValley/DisconnectLogs
