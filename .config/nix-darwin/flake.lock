@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "ferrix": {
+      "locked": {
+        "lastModified": 1761331410,
+        "narHash": "sha256-NFmP5KQ7M0NKPuV6qqGlD7T9d/n9+hnaL0280lKNoPA=",
+        "owner": "ryanccn",
+        "repo": "ferrix",
+        "rev": "c0fa128ca47c1c117a05b8f8f390ca42cfd3ebf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryanccn",
+        "repo": "ferrix",
+        "type": "github"
+      }
+    },
     "helix-master": {
       "inputs": {
         "nixpkgs": [
@@ -8,11 +23,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1778551011,
-        "narHash": "sha256-woJV7tJwwzjR0xWDNuGpwMENe/OEMAdSGg+nqWs9tUE=",
+        "lastModified": 1779426614,
+        "narHash": "sha256-Ynp7Vq/3ycx53zzLh/Dfvjibdvt+mVhTM50O5LCbdmw=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "8c41b11607924f7584b77c8a6e6b16439a2f559f",
+        "rev": "a62d374fcb489f83bddd3a775df250ff4b9b34a9",
         "type": "github"
       },
       "original": {
@@ -29,11 +44,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779336838,
-        "narHash": "sha256-n1+l78hJRABp4cQHKeD0BVByT0vZLPqd09Tvoq8Q+d8=",
+        "lastModified": 1779580960,
+        "narHash": "sha256-/EG2rRahtxdoKKzGPGqaymVB96kBBYhygatEAbsoqaM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "928d72376949e222ea4f07b44828a55b0136422e",
+        "rev": "6e92bf094d45bc33d754e2b0f75d9ca1827cc363",
         "type": "github"
       },
       "original": {
@@ -64,11 +79,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1779259093,
-        "narHash": "sha256-7DKWmH23hL2eYdkxCKeqj2i+yljTKuU+3Nk1UPHOnxc=",
+        "lastModified": 1779536132,
+        "narHash": "sha256-q+fF42iv/geEbHfgSzy3tS0FF/EyD6XTZ98E6yxiBO8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d99b013d5d1931ad77fe3912ed218170dec5d9a4",
+        "rev": "3d8f0f3f72a6cd4d93d0ad13203f2ea1cb7e1456",
         "type": "github"
       },
       "original": {
@@ -78,12 +93,34 @@
         "type": "github"
       }
     },
+    "nyoom": {
+      "inputs": {
+        "ferrix": "ferrix",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771676081,
+        "narHash": "sha256-XuNwRr749SGiz5QwsavvGp/nztCjeQV5CBE75KeftPU=",
+        "owner": "ryanccn",
+        "repo": "nyoom",
+        "rev": "6c88a713115b1c04f69839c6e25354d3c7c74758",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryanccn",
+        "repo": "nyoom",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "helix-master": "helix-master",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nyoom": "nyoom"
       }
     },
     "rust-overlay": {

@@ -12,6 +12,9 @@
 
     helix-master.url = "github:helix-editor/helix/master";
     helix-master.inputs.nixpkgs.follows = "nixpkgs";
+
+    nyoom.url = "github:ryanccn/nyoom";
+    nyoom.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =

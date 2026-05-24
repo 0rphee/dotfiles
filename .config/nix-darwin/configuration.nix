@@ -79,6 +79,7 @@
       TrackpadFourFingerHorizSwipeGesture = 2;
       Clicking = true;
       FirstClickThreshold = 2;
+      Dragging = true;
       TrackpadThreeFingerDrag = true;
       TrackpadThreeFingerTapGesture = 2;
     };

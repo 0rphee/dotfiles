@@ -2,6 +2,7 @@
   pkgs,
   lib,
   user,
+  inputs,
   ...
 }:
 rec {
@@ -26,9 +27,7 @@ rec {
     # see service note in configuration.nix
     pkgs.yabai
     pkgs.skhd
-
-    pkgs.jdk
-    pkgs.maven
+    inputs.nyoom.packages.${pkgs.system}.nyoom
   ];
 
   home.activation = {

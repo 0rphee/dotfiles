@@ -35,7 +35,6 @@
       "docker-desktop"
       "firefox"
       "handbrake-app"
-      "steam"
       "raycast"
       "zoom"
       "openinterminal-lite"
@@ -43,9 +42,10 @@
       "launchcontrol"
       "chromium"
       "obsidian"
-      "steam"
+      "gechr/tap/whichspace"
       # "altserver"
       # "bitwarden" installed via app store
+      # "steam"
 
       "font-comic-mono"
       "font-iosevka"
