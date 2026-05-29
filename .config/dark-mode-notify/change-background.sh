@@ -28,9 +28,10 @@ esac
 ln -sf "$HOME/.config/helix/themes/my-${chosen_theme}.toml" "$HOME/.config/helix/themes/current-theme.toml"
 pkill -USR1 hx &
 
-# kitty
-ln -sf "$HOME/.config/kitty/themes/${chosen_theme}.conf" "$HOME/.config/kitty/themes/current-theme.conf"
-pkill -USR1 kitty &
+# # kitty
+# ln -sf "$HOME/.config/kitty/themes/${chosen_theme}.conf" "$HOME/.config/kitty/themes/current-theme.conf"
+# pkill -USR1 kitty &
+
 
 # btop
 sed -i '' "s|${previous_theme}-medium|${chosen_theme}-medium|g" "$HOME/.config/btop/btop.conf"
