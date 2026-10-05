@@ -133,6 +133,7 @@ in
     pkgs.git
     pkgs.bat
     pkgs.btop
+    pkgs.fastfetch
     pkgs.delta
     pkgs.lazydocker
     pkgs.lazygit
@@ -171,6 +172,8 @@ in
       alias ll="ls -Glh"
       alias la="ls -GlAh"
       alias kssh="kitten ssh"
+
+      fastfetch -c ${./fastfetch.jsonc}
     '';
     promptInit = ''
       source "${pkgs.spaceship-prompt}/lib/spaceship-prompt/spaceship.zsh"
