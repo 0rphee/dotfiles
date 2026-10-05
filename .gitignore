@@ -108,3 +108,7 @@ Virtual Machines.localized
 /.arduinoIDE
 /.config/raycast
 /Applications/Claude Code URL Handler.app/Contents
+/.agents
+/.claude.json.backup
+/wordlists
+/.config/homebrew
