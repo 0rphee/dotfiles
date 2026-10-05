@@ -1,10 +1,14 @@
+[[language]]
+name="rust"
+formatter = { command = "rustfmt" , args = [] }
+
 [language-server.tinymist]
 command = "tinymist"
 config.preview.background = { enabled = true, args = ["--data-plane-host=127.0.0.1:23635", "--invert-colors=auto", "--open"] }
 
 [language-server.haskell-language-server.config.haskell]
-"formattingProvider" = "fourmolu"
-"plugin" = { "stan" = { "globalOn" = true }}
+"formattingProvider" = "ormolu"
+"plugin" = { "stan" = { "globalOn" = false }}
 
 [language-server.purescript-language-server.config.purescript]
 "formatter" = "purs-tidy"

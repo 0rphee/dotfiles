@@ -106,3 +106,5 @@ Virtual Machines.localized
 /.cabal
 /.atuin/logs
 /.arduinoIDE
+/.config/raycast
+/Applications/Claude Code URL Handler.app/Contents
