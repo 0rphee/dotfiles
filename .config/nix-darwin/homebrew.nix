@@ -25,6 +25,8 @@
       # Xcode = 497799835;
     };
 
+    taps = [ "gechr/tap" ];
+
     # `brew install`
     brews = [
     ];
@@ -39,18 +41,15 @@
       "zoom"
       "openinterminal-lite"
       "openineditor-lite"
-      "launchcontrol"
+      # "launchcontrol"
       "chromium"
       "obsidian"
-      "gechr/tap/whichspace"
+      "whichspace"
       # "altserver"
       # "bitwarden" installed via app store
       # "steam"
 
       "font-comic-mono"
-      "font-iosevka"
-      "font-mononoki"
-      "font-symbols-only-nerd-font"
     ];
   };
 }

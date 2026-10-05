@@ -95,6 +95,7 @@ yabai -m rule --add label="Epson Printer Utility 4" app="^Epson Printer Utility 
 yabai -m rule --add label="System Settings" app="^System Settings$" manage=off
 yabai -m rule --add label="System Information" app="^System Information$" manage=off
 yabai -m rule --add label="Steam" app="^Steam$" manage=off
+yabai -m rule --add label="Anki" app="^Anki$" manage=off
 # yabai -m rule --add label="Font Book" app="^$" manage=off
 # yabai -m rule --add label="Tracker" app="^Tracker$" title="Save" manage=off
 

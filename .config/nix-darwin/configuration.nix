@@ -6,33 +6,33 @@
   user,
   ...
 }:
+let
+  helix = inputs.helix-master.packages.${hostPlatform}.default;
+in
 {
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
-  nix.settings.substituters = [
-    "https://cache.nixos.org/"
-    "https://cache.iog.io"
+  # public binary caches only (no auth needed); cache.nixos.org stays as default
+  nix.settings.extra-substituters = [
     "https://nix-community.cachix.org"
-    "https://cache.flakehub.com"
+    "https://cache.iog.io"
+    "https://helix.cachix.org"
   ];
-  nix.settings.trusted-public-keys = [
-    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-    "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+  nix.settings.extra-trusted-public-keys = [
     "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-    "cache.flakehub.com-3:hJuILl5sVK4iKm86JzgdXW12Y2Hwd5G07qKtHTOcDCM="
-    "cache.flakehub.com-4:Asi8qIv291s0aYLyH6IOnr5Kf6+OF14WVjkE6t3xMio="
-    "cache.flakehub.com-5:zB96CRlL7tiPtzA9/WKyPkp3A2vqxqgdgyTVNGShPDU="
-    "cache.flakehub.com-6:W4EGFwAGgBj3he7c5fNh9NkOXw0PUVaxygCVKeuvaqU="
-    "cache.flakehub.com-7:mvxJ2DZVHn/kRxlIaxYNMuDG1OvMckZu32um1TadOR8="
-    "cache.flakehub.com-8:moO+OVS0mnTjBTcOUh2kYLQEd59ExzyoW1QgQ8XAARQ="
-    "cache.flakehub.com-9:wChaSeTI6TeCuV/Sg2513ZIM9i0qJaYsF+lZCXg0J6o="
-    "cache.flakehub.com-10:2GqeNlIp6AKp4EF2MVbE1kBOp9iBSyo0UPR9KoR0o1Y="
+    "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+    "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
   ];
+
+  nix.gc = {
+    automatic = true;
+    options = "--delete-older-than 60d";
+  };
+  nix.optimise.automatic = true;
 
   nix.extraOptions = ''
     always-allow-substitutes = true
     extra-nix-path = nixpkgs=flake:nixpkgs
-    upgrade-nix-store-path-url = https://install.determinate.systems/nix-upgrade/stable/universal
   '';
 
   # The platform the configuration will be used on.
@@ -118,19 +118,9 @@
   };
 
   environment.variables = rec {
-    EDITOR = "${inputs.helix-master.packages.${hostPlatform}.default}/bin/hx";
+    EDITOR = "${helix}/bin/hx"; # full path: PATH may not be set when EDITOR is invoked
     VISUAL = EDITOR;
     GREP_COLOR = "auto";
-  };
-
-  environment.extraInit = "";
-  environment.shellAliases = {
-    # not loaded in nix develop
-    # ls = "ls -G";
-    # lsa = "ls -Glah";
-    # l = "ls -Glah";
-    # ll = "ls -Glh";
-    # la = "ls -GlAh";
   };
 
   # List packages installed in system profile. To search by name, run:
@@ -138,7 +128,7 @@
   environment.systemPackages = [
     # nix
     pkgs.nil
-    pkgs.nixfmt-rfc-style
+    pkgs.nixfmt
 
     pkgs.git
     pkgs.bat
@@ -149,24 +139,25 @@
     pkgs.ripgrep
     pkgs.tree
 
-    pkgs.zsh
-    pkgs.zoxide
-    pkgs.spaceship-prompt
-    pkgs.zsh-autosuggestions
-    pkgs.zsh-vi-mode
-    pkgs.zsh-nix-shell
+    pkgs.python314 # pinned minor version, bump manually
 
-    pkgs.python314
+    helix
+  ];
 
-    inputs.helix-master.packages.${hostPlatform}.default
+  fonts.packages = [
+    pkgs.nerd-fonts.iosevka
+    pkgs.nerd-fonts.mononoki
+    pkgs.nerd-fonts.symbols-only
   ];
 
   programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    enableFastSyntaxHighlighting = true;
     interactiveShellInit = ''
       source "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
       source "${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
       source "${pkgs.zsh-nix-shell}/share/zsh-nix-shell/nix-shell.plugin.zsh"
-      source "${pkgs.zsh-fast-syntax-highlighting}/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
 
       # if a path is not a command, cd into it
       setopt auto_cd
@@ -175,14 +166,12 @@
       alias -g .....='../../../..'
       alias -g ......='../../../../..'
 
-      alias ls="ls -G";
-      alias lsa="ls -Glah";
-      alias l="ls -Glah";
-      alias ll="ls -Glh";
-      alias la="ls -GlAh";
-      alias kssh="kitten ssh";
+      alias ls="ls -G"
+      alias l="ls -Glah"
+      alias ll="ls -Glh"
+      alias la="ls -GlAh"
+      alias kssh="kitten ssh"
     '';
-    loginShellInit = "";
     promptInit = ''
       source "${pkgs.spaceship-prompt}/lib/spaceship-prompt/spaceship.zsh"
     '';

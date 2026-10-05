@@ -98,3 +98,11 @@ Music/
 Pictures/
 Public/
 Virtual Machines.localized
+/.copilot
+/.homebrew
+/.local/share/atuin
+/.local/share/ghc/ghci_history
+/.vscode-shared/sharedStorage
+/.cabal
+/.atuin/logs
+/.arduinoIDE

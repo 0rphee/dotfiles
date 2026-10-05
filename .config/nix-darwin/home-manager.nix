@@ -27,8 +27,23 @@ rec {
     # see service note in configuration.nix
     pkgs.yabai
     pkgs.skhd
-    inputs.nyoom.packages.${pkgs.system}.nyoom
+    inputs.nyoom.packages.${pkgs.stdenv.hostPlatform.system}.nyoom
   ];
+
+  # dotfiles (.zshrc, git config, ...) are managed by hand, not by home-manager,
+  # so shell integrations are disabled. Add to ~/.zshrc if wanted:
+  #   eval "$(zoxide init zsh --cmd cd)"
+  #   eval "$(atuin init zsh)"
+  programs = {
+    atuin = {
+      enable = true;
+      enableZshIntegration = false;
+    };
+    zoxide = {
+      enable = true;
+      enableZshIntegration = false;
+    };
+  };
 
   home.activation = {
     reloadYabaiService = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

@@ -157,8 +157,9 @@ alias lg=lazygit
 # sudo make install
 # export LD_LIBRARY_PATH="$HOME/opt/ncurses/lib:$LD_LIBRARY_PATH"
 
-eval "$(zoxide init zsh --cmd cd)"
 
-# prompt MOVED to nix-darwin flake
-# eval "$(starship init zsh)"
-# source "/nix/store/pad214p2pck4r3bm3qd0dc2k67lgva8f-spaceship-prompt-4.17.0/lib/spaceship-prompt/spaceship.zsh"
+eval "$(mise activate zsh)"
+eval "$(zoxide init zsh --cmd cd)"
+eval "$(atuin init zsh)"
+
+[ -f "/Users/or/.ghcup/env" ] && . "/Users/or/.ghcup/env" # ghcup-env
