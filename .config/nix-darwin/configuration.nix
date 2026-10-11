@@ -38,6 +38,24 @@ in
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = hostPlatform;
 
+  # Override yabai repo with fork, which has a fix for gesture-based
+  # space focusing on macOS 27:
+  # https://github.com/YazeedAlKhalaf/yabai/commit/9d6104a01fcba61ab4a19e5c19931da9efc76a7a
+  nixpkgs.overlays = [
+    (final: prev: {
+      yabai = prev.yabai.overrideAttrs (old: {
+        src = final.fetchFromGitHub {
+          owner = "YazeedAlKhalaf";
+          repo = "yabai";
+          rev = "9d6104a01fcba61ab4a19e5c19931da9efc76a7a";
+          hash = "sha256-eo+bU3k93rXnDDmefscC8AjxDvv08hs9B6bfqqPgdQ0=";
+        };
+        # Fork commit is unreleased (no version tag), so the upstream version-string check doesn't apply.
+        doInstallCheck = false;
+      });
+    })
+  ];
+
   system.primaryUser = "or";
 
   # Set Git commit hash for darwin-version.
