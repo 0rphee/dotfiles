@@ -112,3 +112,7 @@ Virtual Machines.localized
 /.claude.json.backup
 /wordlists
 /.config/homebrew
+/.boto
+/.config/configstore
+/.config/gcloud
+/.local/state/pnpm

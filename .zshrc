@@ -163,3 +163,5 @@ eval "$(zoxide init zsh --cmd cd)"
 eval "$(atuin init zsh)"
 
 [ -f "/Users/or/.ghcup/env" ] && . "/Users/or/.ghcup/env" # ghcup-env
+
+export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
