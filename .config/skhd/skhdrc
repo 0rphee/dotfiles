@@ -14,11 +14,11 @@ lctrl + cmd - l : yabai -m space --focus next
 lalt - return : "${HOME}"/.config/skhd/scripts/open_kitty.sh
 
 # Show system statistics
-fn + alt - 1 : "${HOME}"/.config/skhd/scripts/show_cpu.sh
-fn + alt - 2 : "${HOME}"/.config/skhd/scripts/show_mem.sh
-fn + alt - 3 : "${HOME}"/.config/skhd/scripts/show_bat.sh
-fn + alt - 4 : "${HOME}"/.config/skhd/scripts/show_disk.sh
-fn + alt - 5 : "${HOME}"/.config/skhd/scripts/show_song.sh
+# fn + alt - 1 : "${HOME}"/.config/skhd/scripts/show_cpu.sh
+# fn + alt - 2 : "${HOME}"/.config/skhd/scripts/show_mem.sh
+# fn + alt - 3 : "${HOME}"/.config/skhd/scripts/show_bat.sh
+# fn + alt - 4 : "${HOME}"/.config/skhd/scripts/show_disk.sh
+# fn + alt - 5 : "${HOME}"/.config/skhd/scripts/show_song.sh
 
 # Navigation
 cmd + alt - h : yabai -m window --focus west
@@ -38,12 +38,12 @@ shift + alt - h : yabai -m window --space prev; yabai -m space --focus prev
 shift + alt - l : yabai -m window --space next; yabai -m space --focus next
 
 # TODO: revise using --focus in the first command 
-shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
-shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
-shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
-shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
-shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
-shift + alt - 6 : yabai -m window --space 6; yabai -m space --focus 6
+# shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+# shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+# shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+# shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+# shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
+# shift + alt - 6 : yabai -m window --space 6; yabai -m space --focus 6
 
 # Resize windows
 shift + alt + cmd - h : yabai -m window --resize left:-25:0; \
@@ -92,4 +92,4 @@ lctrl + alt - r : \
 
 # Make window native fullscreen
 lctrl + alt - return         : yabai -m window --toggle zoom-fullscreen
-shift + lctrl + alt - return : yabai -m window --toggle native-fullscreen
+# shift + lctrl + alt - return : yabai -m window --toggle native-fullscreen
