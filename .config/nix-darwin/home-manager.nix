@@ -11,8 +11,6 @@ rec {
   home.homeDirectory = "/Users/${user}";
 
   home.packages = [
-    pkgs.kitty
-
     pkgs.tinymist # typst lsp
     pkgs.typst
     pkgs.typstyle
@@ -73,6 +71,7 @@ rec {
       $SKHD_BIN --start-service
       echo "skhd service reinstalled and restarted"
     '';
+
   };
   launchd.agents = {
     "ke.bou.dark-mode-notify" = {
