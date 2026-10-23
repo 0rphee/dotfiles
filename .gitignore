@@ -116,3 +116,4 @@ Virtual Machines.localized
 /.config/configstore
 /.config/gcloud
 /.local/state/pnpm
+/.gsutil
