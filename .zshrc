@@ -139,8 +139,10 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#849289" #,bg=cyan,bold,underline"
 
 # git access to dotfles
 alias config='git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
-
 alias configlg='lazygit --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
+
+alias bgit='git --git-dir=$HOME/.config/blingbling/ --work-tree=$HOME'
+alias blg='lazygit --git-dir=$HOME/.config/blingbling/ --work-tree=$HOME'
 
 alias lg=lazygit
 

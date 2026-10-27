@@ -117,3 +117,5 @@ Virtual Machines.localized
 /.config/gcloud
 /.local/state/pnpm
 /.gsutil
+/.config/blingbling
+/.hledger.journal

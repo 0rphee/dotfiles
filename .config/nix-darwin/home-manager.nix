@@ -26,6 +26,11 @@ rec {
     pkgs.yabai
     pkgs.skhd
     inputs.nyoom.packages.${pkgs.stdenv.hostPlatform.system}.nyoom
+
+    pkgs.hledger
+    pkgs.hledger-ui
+    pkgs.hledger-web
+    pkgs.hledger-iadd
   ];
 
   # dotfiles (.zshrc, git config, ...) are managed by hand, not by home-manager,
