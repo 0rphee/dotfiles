@@ -164,6 +164,8 @@ in
   ];
 
   fonts.packages = [
+    pkgs.ioskeley-mono.standard
+    pkgs.ioskeley-mono.nl
     pkgs.nerd-fonts.iosevka
     pkgs.nerd-fonts.mononoki
     pkgs.nerd-fonts.symbols-only
